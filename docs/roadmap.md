@@ -1,10 +1,10 @@
 # Roadmap de Nodo Norte
 
-Fecha de preparación: 27/10/2026. Estado actual: documentación actualizada y briefing preparado; conversación con la profesora pendiente. No hay fechas de sprint o entrega confirmadas.
+Fecha de preparación: 27/10/2026. Estado actual: repositorio creado por el usuario, documentación organizada y briefing preparado; briefing reducido a nueve preguntas, respuestas todavía sin consolidar y Project pendiente de crear. No hay fechas de sprint o entrega confirmadas.
 
 ## 1. Secuencia acordada
 
-**Resolver dudas con la profesora -> actualizar requisitos -> crear repositorio -> crear GitHub Projects -> elaborar backlog -> Sprint 1 -> Review y Planning 2 -> Sprint 2 -> validación y entrega.**
+**Repositorio creado -> resolver dudas con la profesora -> actualizar requisitos y revisar accesos -> crear GitHub Projects -> elaborar backlog -> Sprint 1 -> Review y Planning 2 -> Sprint 2 -> validación y entrega.**
 
 Este es un roadmap de fases y dependencias, no un backlog con historias priorizadas o tareas estimadas. Sigue el orden solicitado por el equipo. El enunciado agrupa la creación del repositorio y el backlog durante el Planning 1: preparar primero el repositorio/Project no cambia los entregables ni los dos sprints.
 
@@ -13,9 +13,9 @@ Este es un roadmap de fases y dependencias, no un backlog con historias prioriza
 | Fase | Depende de | Trabajo previsto | Resultado para darla por cerrada | Estado |
 | --- | --- | --- | --- | --- |
 | 0. Reunir documentación | Archivos del cliente | Leer enunciado, entrevista e historias; incorporar HU-01 a HU-10, con HU-10 solo para trío. | Requisitos consolidados, transcripciones y discrepancias identificadas. | Completada. |
-| 1. Briefing y aclaraciones | Fase 0 | Preguntar Q01-Q08 primero; resolver el resto según aplique; registrar decisiones. | Alcance de formularios/pagos/newsletter, plazas/socios, contenido, prioridades y fechas confirmados o con pendientes expresamente acordados. | Briefing preparado; respuestas pendientes. |
-| 2. Consolidar requisitos | Fase 1 | Trasladar respuestas, comprobar pareja/trío y completar fichas 1 y 2. | Requisitos vigentes y dudas relevantes resueltas o delimitadas por la profesora. | Pendiente. |
-| 3. Repositorio GitHub | Fase 2 y datos del equipo | Crear un único repositorio, accesos, estructura prescrita y README inicial; cada miembro configura su identidad y clona. | Equipo y profesora pueden acceder; estructura y README versionados. | Pendiente; siguiente fase de infraestructura. |
+| 1. Briefing y aclaraciones | Fase 0 | Trabajar únicamente las preguntas seleccionadas Q01-Q09 y conservar sus respuestas para revisarlas conjuntamente. | Dudas seleccionadas tratadas o identificadas como pendientes; otras cuestiones se resuelven cuando hagan falta. | Selección de preguntas actualizada; respuestas sin consolidar todavía. |
+| 2. Consolidar requisitos | Revisión posterior de las respuestas del briefing | Incorporar las decisiones cuando se revisen; completar fichas 1 y 2 con los datos disponibles y registrar lo que siga pendiente. | Decisiones revisadas reflejadas en requisitos; pendientes identificados sin ampliar el briefing. | Pendiente; en esta revisión no se incorporan respuestas. |
+| 3. Repositorio GitHub | Repositorio ya creado; datos del equipo para accesos | Revisar accesos, completar estructura y README; cada miembro configura su identidad y clona. | Equipo y profesora pueden acceder; estructura y README versionados. | Repositorio creado y documentación organizada; accesos, configuración de miembros y versionado de estos cambios pendientes de comprobar. |
 | 4. GitHub Projects | Fase 3 | Crear tablero Por hacer / En curso / Hecho y comprobar accesos. | Tablero accesible y enlazado desde README, listo para incorporar el backlog. | Pendiente. |
 | 5. Product Backlog | Fases 2 y 4 | Ficha 3: historias literales, tareas T, Product Goal, recursos, prioridades, horas con pruebas, sprint y estado; ordenar y sumar capacidad. | Backlog acordado con Product Owner, trazable por IDs y ajustado al tiempo. | Pendiente; se hará después de repo y Project. |
 | 6. Planning y Sprint 1 | Fase 5 | Elegir Scrum Master, Sprint Goal y ficha 4; Daily, wireframes, moodboard, guía y plantilla Bootstrap. | Material preparado para Review y plantilla con navbar/footer en las tres páginas, disponible en `main`. | Pendiente. |
@@ -37,7 +37,7 @@ El calendario del enunciado se conserva como referencia; estas duraciones no son
 | Sprint 2 | 3 sesiones; unas 6 horas de equipo | Web terminada; última sesión para validación y README. |
 | Review final y retrospectiva | 1 sesión; presentación de 10 min por equipo | Defensa y cierre. |
 
-Las fases 3 y 4 de este roadmap son preparación dentro de la organización inicial, no sprints adicionales. Confirmar fechas con Q08. Las pruebas forman parte de cada tarea; la fase 9 es la comprobación conjunta final y se realiza dentro del Sprint 2.
+Las fases 3 y 4 de este roadmap son preparación dentro de la organización inicial, no sprints adicionales. Consultar las fechas en Q07. Las pruebas forman parte de cada tarea; la fase 9 es la comprobación conjunta final y se realiza dentro del Sprint 2.
 
 ## 4. Qué se decidirá al hacer el backlog
 
@@ -48,16 +48,23 @@ Las fases 3 y 4 de este roadmap son preparación dentro de la organización inic
 - Si una historia no cabe, dejarla sin sprint según lo acordado con la profesora; no eliminar por ello los mínimos académicos. HU-10 no aplica a parejas.
 - Descomposición en tareas de una sesión o menos en la ficha 4 y el tablero, con responsables y relación con la HU correspondiente.
 
-## 5. Puntos que pueden cambiar el roadmap
+## 5. Preguntas vigentes y su relación con el trabajo
 
-| Incertidumbre | Preguntas del briefing | Consecuencia |
+Las referencias siguientes corresponden únicamente a la selección actual de [briefing-inicial.md](briefing-inicial.md). Se relacionan por el contenido de las preguntas; las respuestas todavía no se utilizan para modificar el alcance.
+
+| Tema | Preguntas vigentes | Trabajo relacionado |
 | --- | --- | --- |
-| Envíos, persistencia y pagos reales frente a representación visual | Q01-Q03 | Puede cambiar recursos, pruebas y horas de formularios/newsletter/plazas. |
-| Cuota, alta y ventajas de socios | Q04 y Q07 | Determina textos, campos y comportamiento de Únete. |
-| Material facilitado y cantidad de contenido | Q05 y Q09-Q14 | Determina trabajo de redacción, selección de imágenes y datos. |
-| Prioridades y capacidad | Q06 y Q08 | Determina selección por sprint y calendario. |
-| Equipo de dos o tres | Confirmar con el equipo; Q15 si procede | Determina HU-10 y dirección de Reviews por el tercer miembro. |
-| Accesos y formatos de entrega | Q16-Q17 | Determina preparación de GitHub y documentación final. |
+| Funcionamiento real de formularios y pagos | Q01 | Recursos, interacción, validación y posibles integraciones. |
+| Newsletter | Q02 | Alcance de HU-09 y presentación del registro. |
+| Plazas e inscripción | Q03 | Comportamiento de HU-04 y HU-06 al reservar o completar aforo. |
+| Cuota, ventajas y alta de socios | Q04 | Textos y funcionamiento del apartado de socios. |
+| Contenido y cantidad de ejemplos | Q05 | Datos, fotografías y cantidad de eventos y ponentes. |
+| Datos de los formularios | Q06 | Campos, opciones y obligatoriedad. |
+| Fechas | Q07 | Calendario de sprints, Reviews y entrega. |
+| Ficha de ponente | Q08 | Datos que mostrar en HU-05. |
+| Marca, logotipo y referencia visual | Q09 | Identidad y diseño previo. |
+
+Las prioridades y estimaciones se trabajan al hacer el backlog. Las cuestiones de equipo, accesos, formatos, detalles visuales o contenido no incluido en estas preguntas se resolverán en la fase en que sean necesarias. No es necesario convertirlas todas en preguntas iniciales ni tratarlas como condiciones previas generales para avanzar; si una decisión afecta a una tarea concreta, se aclara al preparar esa tarea.
 
 ## 6. Criterio de terminado y seguimiento
 
@@ -75,4 +82,8 @@ Checklist de cierre:
 - [ ] Commits de todos, tablero actualizado e incremento final en `main`.
 - [ ] Review final, retrospectiva y ZIP de entrega con enlace al repositorio en Moodle.
 
-Referencias de trabajo: [requisitos](requisitos-y-datos-iniciales.md) y [briefing](briefing-profesora.md). Las condiciones académicas completas, incluida la del uso de IA, siguen recogidas en requisitos y en el enunciado original.
+Referencias de trabajo: [requisitos](requisitos-y-datos-iniciales.md) y [briefing](briefing-inicial.md). Las condiciones académicas completas, incluida la del uso de IA, siguen recogidas en requisitos y en el enunciado original.
+
+## 7. Ubicación de los archivos
+
+Los tres documentos de trabajo están en `docs/`. Consultar el [índice del repositorio](../README.md). Fuentes: [enunciado](fuentes/pdf/practica-scrum-bootstrap-alumnado.pdf), [historias](fuentes/pdf/historias-de-usuario-nodo-norte.pdf), [foto 1](fuentes/fotos/entrevista-01.jpeg) y [foto 2](fuentes/fotos/entrevista-02.jpeg). Las rutas de entrega mencionadas en el checklist se expresan desde la raíz del repositorio.

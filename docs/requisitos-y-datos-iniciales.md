@@ -4,16 +4,16 @@ Fecha de recopilación: 27/10/2026.
 
 Este documento reúne el enunciado, las historias de usuario del cliente y los datos de las dos fotografías. Incluye una versión organizada, la transcripción de las fotos y el texto completo de los dos PDF (13 y 3 páginas). No sustituye las fichas que hay que rellenar y entregar.
 
-Documentos de trabajo relacionados: [briefing para la profesora](briefing-profesora.md) y [roadmap](roadmap.md). El orden acordado es resolver dudas, crear repositorio y Project y después preparar el backlog.
+Documentos de trabajo relacionados: [briefing para la profesora](briefing-inicial.md) y [roadmap](roadmap.md). El repositorio ya está creado; el siguiente orden es resolver dudas, preparar el Project y después elaborar el backlog.
 
 ## 1. Fuentes y criterio de lectura
 
 | Fuente | Archivo | Contenido |
 | --- | --- | --- |
-| PDF | `practica-scrum-bootstrap-alumnado.pdf` | Enunciado, requisitos, organización, evaluación y fichas; 13 páginas. |
-| HU | `historias-de-usuario-nodo-norte.pdf` | Diez historias identificadas, explicación y preparación del backlog; 3 páginas. HU-10 solo corresponde al trío. |
-| F1 | `WhatsApp Image 2026-10-27 at 09.32.06.jpeg` | Identidad, formularios, socios y contacto. |
-| F2 | `WhatsApp Image 2026-10-27 at 09.32.06 (1).jpeg` | Eventos, valores, pagos, tipografía y lugares. |
+| PDF | [practica-scrum-bootstrap-alumnado.pdf](fuentes/pdf/practica-scrum-bootstrap-alumnado.pdf) | Enunciado, requisitos, organización, evaluación y fichas; 13 páginas. |
+| HU | [historias-de-usuario-nodo-norte.pdf](fuentes/pdf/historias-de-usuario-nodo-norte.pdf) | Diez historias identificadas, explicación y preparación del backlog; 3 páginas. HU-10 solo corresponde al trío. |
+| F1 | [WhatsApp Image 2026-10-27 at 09.32.06.jpeg](fuentes/fotos/entrevista-01.jpeg) | Identidad, formularios, socios y contacto. |
+| F2 | [WhatsApp Image 2026-10-27 at 09.32.06 (1).jpeg](fuentes/fotos/entrevista-02.jpeg) | Eventos, valores, pagos, tipografía y lugares. |
 
 Los requisitos académicos proceden del PDF; las historias, del documento HU; las preferencias de la entrevista, de las fotos. Las recomendaciones se identifican como tales. Las lecturas dudosas se marcan y los tachados no se consideran decisiones vigentes. No se inventan eventos, datos de contacto, miembros, fechas ni historias de usuario.
 
@@ -240,6 +240,12 @@ nombre-comunidad/
 └── README.md
 ```
 
+### Organización actual de la documentación
+
+La documentación de trabajo está en `docs/`: [requisitos](requisitos-y-datos-iniciales.md), [briefing](briefing-inicial.md) y [roadmap](roadmap.md). Los PDF originales están en `docs/fuentes/pdf/` y las fotos de la entrevista en `docs/fuentes/fotos/`, con nombres `entrevista-01.jpeg` y `entrevista-02.jpeg`. La tabla de fuentes enlaza a cada archivo y conserva sus nombres originales para identificarlo.
+
+Las rutas de estructura y entrega se expresan desde la raíz del repositorio; los enlaces Markdown son relativos a cada documento. Los árboles y textos transcritos del enunciado conservan las rutas originales exigidas. Los documentos finales como `docs/fichas-practica.pdf` y `docs/guia-estilos.pdf` se incorporarán cuando se elaboren; los PDF fuente no los sustituyen. Índice del repositorio: [README](../README.md).
+
 Páginas e imágenes con nombres según contenido, sin espacios ni tildes. `nodo-norte` sería un nombre sugerido para carpeta/repositorio, no una imposición del PDF.
 
 El apartado de diseño permite guía PDF o PNG, pero el árbol muestra PDF: usar PDF permite ajustarse también al árbol. El moodboard es obligatorio aunque no tenga ruta propia en el árbol.
@@ -272,26 +278,41 @@ Suspenso inmediato si:
 6. No se usa Git correctamente; quien no tenga commits suspende.
 7. **«Se usa IA para realizarla».** Es una condición literal del enunciado; las fuentes no explican excepciones ni delimitan su aplicación a tareas auxiliares como transcripción y organización.
 
-## 10. Pendientes y ambigüedades
+## 10. Dudas seleccionadas y cuestiones para más adelante
 
-- Equipo, miembros, pareja/trío y responsables/Scrum Masters.
-- Fechas de sprints y entrega.
-- Prioridades, estimaciones y criterios de aceptación por acordar para las historias ya recibidas; HU-09 figura en el documento de historias aunque en F2 aparece una referencia tachada a newsletter.
-- Grafía final de la marca, logotipo, paleta y fuente de títulos.
-- Referencia que parece «Lareira» y nombres/direcciones de lugares, especialmente «Wekco».
-- Opciones de tipo de charla y nivel de front-end; campos del alta de socios.
-- Cuota voluntaria de 10 €, plaza garantizada frente a prerreserva y datos de pago.
-- Distribución de fotos, diapositivas y blog en las páginas previstas.
-- Eventos, ponentes, contenido de ediciones anteriores, correo y redes de la comunidad.
-- Alcance de los formularios: maqueta/validación o alguna operación real de inscripción/pago.
-- Aplicación de la condición sobre IA a tareas auxiliares, si se necesita aclaración de la profesora.
+### Selección vigente del briefing
+
+El equipo ha reducido el [briefing inicial](briefing-inicial.md) a estas nueve preguntas. Esta selección delimita qué se quiere preguntar ahora, sin eliminar los requisitos del enunciado ni dar por resueltas otras cuestiones. Las respuestas anotadas no se incorporan todavía a este documento.
+
+| Pregunta | Tema que se quiere aclarar |
+| --- | --- |
+| Q01 | Funcionamiento real o simulado de formularios y pagos. |
+| Q02 | Newsletter: alcance y presencia del registro. |
+| Q03 | Plazas, inscripción y comportamiento con aforo completo. |
+| Q04 | Cuota voluntaria, ventajas, reserva de plazas y alta de socios. |
+| Q05 | Material aportado por el cliente y cantidad de ejemplos. |
+| Q06 | Campos, opciones y obligatoriedad en los formularios. |
+| Q07 | Fechas de sprints, Reviews y entrega. |
+| Q08 | Datos de la ficha de ponente. |
+| Q09 | Grafía de la marca, logotipo y referencia visual. |
+
+### Cuestiones que se resolverán según se necesiten
+
+- Equipo, pareja/trío, responsables y Scrum Masters al organizar el trabajo.
+- Prioridades, estimaciones y criterios de aceptación al elaborar el backlog y planificar cada sprint.
+- Paleta, fuente de títulos y otros detalles visuales al preparar el diseño.
+- Nombres y direcciones de los lugares, correo, redes y datos concretos de pago al preparar el contenido correspondiente.
+- Distribución de fotos, diapositivas y blog dentro de las páginas previstas cuando se diseñen esas secciones.
+- Accesos, formatos de documentación y cualquier aclaración académica cuando afecten a una tarea o a la entrega.
+
+Estas cuestiones no amplían el briefing ni se consideran todas condiciones previas para crear el Project o preparar el backlog. Se mantienen como aspectos por concretar cuando afecten al trabajo.
 
 ## 11. Orden acordado y próximos pasos
 
-El orden solicitado por el equipo es **briefing y respuestas -> repositorio GitHub -> GitHub Projects -> Product Backlog -> planificación y ejecución de los sprints**. El calendario original del enunciado, conservado en la sección 7, agrupa backlog y creación del repositorio en el Planning 1; aquí se prepara antes la infraestructura para trabajar después sobre ella.
+El repositorio GitHub ya está creado. El orden pendiente es **briefing y respuestas -> revisar accesos y preparar GitHub Projects -> Product Backlog -> planificación y ejecución de los sprints**. El calendario original del enunciado, conservado en la sección 7, agrupa backlog y creación del repositorio en el Planning 1; aquí se prepara antes la infraestructura para trabajar después sobre ella.
 
-1. Usar [briefing-profesora.md](briefing-profesora.md) para preguntar dudas y registrar decisiones. Actualizar requisitos y completar fichas 1 y 2 con las respuestas.
-2. Crear un único repositorio GitHub, invitar a compañeros y profesora y preparar estructura y README inicial. Cada miembro usa su identidad de Git; los demás clonan el mismo repositorio.
+1. Usar las nueve preguntas seleccionadas en [briefing-inicial.md](briefing-inicial.md). Revisar conjuntamente las respuestas más adelante e incorporar entonces las decisiones a requisitos y fichas 1 y 2; el resto de dudas se resolverá cuando se necesite.
+2. Revisar los accesos del repositorio GitHub ya creado, invitar a compañeros y profesora y completar la estructura y el README inicial. Cada miembro usa su identidad de Git; los demás clonan el mismo repositorio.
 3. Crear el Project con Por hacer / En curso / Hecho y acordar acceso. El tablero queda preparado para incorporar el backlog a continuación.
 4. Preparar la ficha 3: copiar historias con sus IDs, añadir tareas técnicas/de diseño, acordar Product Goal y prioridades, estimar incluidas pruebas y comprobar capacidad. Esta tarea queda para después de las fases anteriores.
 5. Planificar Sprint 1: Scrum Master, Sprint Goal y tareas de una sesión o menos en ficha 4/tablero, con responsables.
@@ -308,7 +329,9 @@ Git guarda el historial; GitHub aloja el repositorio compartido; GitHub Projects
 
 Se mantiene el orden del contenido, normalizando ortografía y puntuación para facilitar la lectura. Las dudas y tachados se indican entre corchetes.
 
-### F1: WhatsApp Image 2026-10-27 at 09.32.06.jpeg
+### F1: fotografía 1 de la entrevista
+
+Archivo: [entrevista-01.jpeg](fuentes/fotos/entrevista-01.jpeg). Nombre original: «WhatsApp Image 2026-10-27 at 09.32.06.jpeg».
 
 Título: **Preguntas**.
 
@@ -322,7 +345,9 @@ Título: **Preguntas**.
 - Minimalista pero que la portada llame la atención. Ej.: WordPress, «Lareira» [lectura dudosa], cosas retro.
 - Plazas prereservadas y aviso [pequeño fragmento tachado] antes que todos los demás.
 
-### F2: WhatsApp Image 2026-10-27 at 09.32.06 (1).jpeg
+### F2: fotografía 2 de la entrevista
+
+Archivo: [entrevista-02.jpeg](fuentes/fotos/entrevista-02.jpeg). Nombre original: «WhatsApp Image 2026-10-27 at 09.32.06 (1).jpeg».
 
 - Ubicación de los eventos aparece.
 - Fotos, diapositivas y blog.
@@ -709,7 +734,7 @@ Mónica Pérez Sueiro · monicaprofeciclos@gmail.com · 13
 
 ## 14. Transcripción completa del PDF de historias de usuario
 
-Fuente: `historias-de-usuario-nodo-norte.pdf`, 3 páginas. Se conserva el texto completo con sus ejemplos. Las tablas se presentan como texto plano; las prioridades y tareas del ejemplo no son decisiones del equipo.
+Fuente: [historias-de-usuario-nodo-norte.pdf](fuentes/pdf/historias-de-usuario-nodo-norte.pdf), 3 páginas. Se conserva el texto completo con sus ejemplos. Las tablas se presentan como texto plano; las prioridades y tareas del ejemplo no son decisiones del equipo.
 
 ### Historias: página 1
 
