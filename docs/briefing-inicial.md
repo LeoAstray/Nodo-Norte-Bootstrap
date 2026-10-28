@@ -14,7 +14,7 @@ Las preguntas Q01-Q09 son la selección vigente para esta conversación. Las dem
 
 **¿Se espera una web estática con validación y confirmación visual, o deben enviarse y guardarse de verdad las inscripciones, propuestas y altas? ¿Transferencia y PayPal se explican visualmente o hay que integrar algún servicio?**
 
-Respuesta / criterio acordado: _Pendiente_.
+Respuesta / criterio acordado: _No, solo debe mostrarse visualmente, no hace falta hacer back-end_.
 
 ### Q02. Newsletter y discrepancia con los apuntes
 
@@ -38,32 +38,19 @@ Respuesta / criterio acordado: _La cuota es voluntaria, no hace falta darla pero
 
 **¿Nos proporcionas eventos, ponentes, fotografías y datos de contacto o podemos crear contenido de muestra coherente? ¿Cuántos eventos próximos, pasados y ponentes necesitas ver? En el ejemplo aparecen cuatro eventos reales: ¿es solo un ejemplo o quieres ese mínimo?**
 
-Respuesta / criterio acordado: _Pendiente_.
+Respuesta / criterio acordado: _Los eventos los desarrollaremos nosotros mismos. No hay un número de eventos, vamos a proponer unos 4 en principio._.
 
 ### Q06. Datos de los formularios
 
 **¿Qué campos y opciones deben llevar exactamente la inscripción, la propuesta de charla y el alta de socio? ¿Qué tipos de propuesta se admiten y qué niveles usamos? ¿Qué campos son obligatorios?**
 
-Respuesta / criterio acordado: _Pendiente_.
+Respuesta / criterio acordado: _Inscripción serían Nombre, Apellidos, Mail, Fecha de nacimiento e Intereses si no estás registrado como socio, si lo estuvieras sería solo darle a un botón de inscribirse. La propuesta de charla y el alta de socio tendrán los mismos campos añadiendo el DNI._.
 
-### Q07. Fechas y disponibilidad
-
-**¿Cuáles son las fechas exactas de inicio y cierre de cada sprint, de las dos Reviews y de entrega en Moodle?**
-
-Respuesta / criterio acordado: _Pendiente_.
-
-### Q08. Datos de la ficha de ponente
-
-**Para HU-05, ¿qué datos debe mostrar la ficha de ponente: nombre, foto, biografía, tema y enlaces?**
-
-Respuesta / criterio acordado: _Pendiente_.
-
-### Q09. Marca, logotipo y referencia visual
+### Q07. Marca, logotipo y referencia visual
 
 **¿La marca se escribe «Nodo Norte» o «NodoNorte»? ¿Hay logotipo o podemos diseñar uno? ¿Cuál es la referencia web anotada como «Lareira» y puedes dar su enlace?**
 
 Respuesta / criterio acordado: _Nodo Norte. Hay que diseñar el logotipo. El enlace de lareira es "https://lareiraconf.es/"_.
-
 
 ## Cierre de la conversación y registro de decisiones
 
