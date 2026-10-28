@@ -4,7 +4,7 @@ Fecha de preparación: 27/10/2026. Estado actual: repositorio creado por el usua
 
 ## 1. Secuencia acordada
 
-**Repositorio creado -> resolver dudas con la profesora -> actualizar requisitos y revisar accesos -> crear GitHub Projects -> elaborar backlog -> Sprint 1 -> Review y Planning 2 -> Sprint 2 -> validación y entrega.**
+**Repositorio creado -> resolver dudas con la profesora -> actualizar requisitos y revisar accesos -> crear GitHub Projects -> completar fichas 1 y 2 -> elaborar backlog -> Sprint 1 -> Review y Planning 2 -> Sprint 2 -> validación y entrega.**
 
 Este es un roadmap de fases y dependencias, no un backlog con historias priorizadas o tareas estimadas. Sigue el orden solicitado por el equipo. El enunciado agrupa la creación del repositorio y el backlog durante el Planning 1: preparar primero el repositorio/Project no cambia los entregables ni los dos sprints.
 
@@ -17,6 +17,7 @@ Este es un roadmap de fases y dependencias, no un backlog con historias prioriza
 | 2. Consolidar requisitos | Revisión posterior de las respuestas del briefing | Incorporar las decisiones cuando se revisen; completar fichas 1 y 2 con los datos disponibles y registrar lo que siga pendiente. | Decisiones revisadas reflejadas en requisitos; pendientes identificados sin ampliar el briefing. | Pendiente; en esta revisión no se incorporan respuestas. |
 | 3. Repositorio GitHub | Repositorio ya creado; datos del equipo para accesos | Revisar accesos, completar estructura y README; cada miembro configura su identidad y clona. | Equipo y profesora pueden acceder; estructura y README versionados. | Repositorio creado y documentación organizada; accesos, configuración de miembros y versionado de estos cambios pendientes de comprobar. |
 | 4. GitHub Projects | Fase 3 | Crear tablero Por hacer / En curso / Hecho y comprobar accesos. | Tablero accesible y enlazado desde README, listo para incorporar el backlog. | Pendiente. |
+| 5. Completar Fichas 1 y 2 | Fase 2 | Completar los requisitos de ambas fichas con toda la información proporcionada | Necesitamos que esté aprobado por la profesora | Pendiente.
 | 5. Product Backlog | Fases 2 y 4 | Ficha 3: historias literales, tareas T, Product Goal, recursos, prioridades, horas con pruebas, sprint y estado; ordenar y sumar capacidad. | Backlog acordado con Product Owner, trazable por IDs y ajustado al tiempo. | Pendiente; se hará después de repo y Project. |
 | 6. Planning y Sprint 1 | Fase 5 | Elegir Scrum Master, Sprint Goal y ficha 4; Daily, wireframes, moodboard, guía y plantilla Bootstrap. | Material preparado para Review y plantilla con navbar/footer en las tres páginas, disponible en `main`. | Pendiente. |
 | 7. Review 1 y Planning 2 | Fase 6 | Review de 4 min, aceptación/cambios, retrospectiva, rotación de Scrum Master y planificación siguiente. | Diseño aprobado o cambios delimitados; ficha 5; backlog actualizado y Sprint Goal 2 acordado. | Pendiente. |
