@@ -1,12 +1,12 @@
 # Briefing de dudas para la profesora
 
-Preparado el 27/10/2026. Estado: nueve preguntas seleccionadas; respuestas todavía sin consolidar en requisitos.
+Preparado el 27/10/2026. Estado: siete preguntas seleccionadas; respuestas todavía sin consolidar en requisitos.
 
 ## Objetivo y orden de la reunión
 
-El repositorio ya está creado. Aclarar el alcance y los criterios de aceptación antes de preparar GitHub Projects y construir el Product Backlog. Las preguntas parten del enunciado, las dos fotos y [historias-de-usuario-nodo-norte.pdf](fuentes/pdf/historias-de-usuario-nodo-norte.pdf).
+El repositorio ya está creado. Aclarar el alcance y los criterios de aceptación antes de construir el Product Backlog; GitHub Projects ya está preparado. Las preguntas parten del enunciado, las dos fotos y [historias-de-usuario-nodo-norte.pdf](fuentes/pdf/historias-de-usuario-nodo-norte.pdf).
 
-Las preguntas Q01-Q09 son la selección vigente para esta conversación. Las demás dudas se resolverán cuando sean necesarias; no forman parte de este briefing. Las respuestas anotadas se conservan y se revisarán conjuntamente más adelante, sin trasladarlas todavía a requisitos.
+Las preguntas Q01-Q07 son la selección vigente para esta conversación. Las demás dudas se resolverán cuando sean necesarias; no forman parte de este briefing. Las respuestas anotadas se conservan y se revisarán conjuntamente más adelante, sin trasladarlas todavía a requisitos.
 
 ## Preguntas
 
@@ -54,6 +54,6 @@ Respuesta / criterio acordado: _Nodo Norte. Hay que diseñar el logotipo. El enl
 
 ## Cierre de la conversación y registro de decisiones
 
-Después de la conversación: trasladar respuestas a [requisitos-y-datos-iniciales.md](requisitos-y-datos-iniciales.md), ajustar [roadmap.md](roadmap.md), revisar accesos del repositorio existente y crear el Project y, a continuación, preparar el backlog con la ficha 3. Este briefing está preparado para que lo preguntéis en clase; no se ha enviado a la profesora.
+Después de la conversación: trasladar respuestas a [requisitos-y-datos-iniciales.md](requisitos-y-datos-iniciales.md), ajustar [roadmap.md](roadmap.md), revisar accesos del repositorio existente y mantener el Project ya creado y, a continuación, preparar el backlog con la ficha 3. Este briefing está preparado para que lo preguntéis en clase; no se ha enviado a la profesora.
 
 Ubicación de esta documentación: `docs/`, desde la raíz del repositorio. Los enlaces de este documento son relativos a su carpeta; las rutas de entrega como `docs/fichas-practica.pdf` se expresan desde la raíz. Índice: [README del proyecto](../README.md).

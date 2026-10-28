@@ -4,7 +4,7 @@ Fecha de recopilación: 27/10/2026.
 
 Este documento reúne el enunciado, las historias de usuario del cliente y los datos de las dos fotografías. Incluye una versión organizada, la transcripción de las fotos y el texto completo de los dos PDF (13 y 3 páginas). No sustituye las fichas que hay que rellenar y entregar.
 
-Documentos de trabajo relacionados: [briefing para la profesora](briefing-inicial.md) y [roadmap](roadmap.md). El repositorio ya está creado; el siguiente orden es resolver dudas, preparar el Project y después elaborar el backlog.
+Documentos de trabajo relacionados: [briefing para la profesora](briefing-inicial.md) y [roadmap](roadmap.md). El repositorio y el [Project](https://github.com/users/LeoAstray/projects/1) ya están creados; la tarea de la [ficha 2](https://github.com/LeoAstray/Nodo-Norte-Bootstrap/issues/1) está registrada y el backlog se elaborará después.
 
 ## 1. Fuentes y criterio de lectura
 
@@ -282,7 +282,7 @@ Suspenso inmediato si:
 
 ### Selección vigente del briefing
 
-El equipo ha reducido el [briefing inicial](briefing-inicial.md) a estas nueve preguntas. Esta selección delimita qué se quiere preguntar ahora, sin eliminar los requisitos del enunciado ni dar por resueltas otras cuestiones. Las respuestas anotadas no se incorporan todavía a este documento.
+El equipo ha reducido el [briefing inicial](briefing-inicial.md) a estas siete preguntas. Esta selección delimita qué se quiere preguntar ahora, sin eliminar los requisitos del enunciado ni dar por resueltas otras cuestiones. Las respuestas anotadas no se incorporan todavía a este documento.
 
 | Pregunta | Tema que se quiere aclarar |
 | --- | --- |
@@ -292,13 +292,12 @@ El equipo ha reducido el [briefing inicial](briefing-inicial.md) a estas nueve p
 | Q04 | Cuota voluntaria, ventajas, reserva de plazas y alta de socios. |
 | Q05 | Material aportado por el cliente y cantidad de ejemplos. |
 | Q06 | Campos, opciones y obligatoriedad en los formularios. |
-| Q07 | Fechas de sprints, Reviews y entrega. |
-| Q08 | Datos de la ficha de ponente. |
-| Q09 | Grafía de la marca, logotipo y referencia visual. |
+| Q07 | Grafía de la marca, logotipo y referencia visual. |
 
 ### Cuestiones que se resolverán según se necesiten
 
-- Equipo, pareja/trío, responsables y Scrum Masters al organizar el trabajo.
+- Equipo, pareja/trío, responsables, Scrum Masters y fechas de sprints, Reviews y entrega al organizar el trabajo.
+- Datos de la ficha de ponente cuando se diseñe esa sección.
 - Prioridades, estimaciones y criterios de aceptación al elaborar el backlog y planificar cada sprint.
 - Paleta, fuente de títulos y otros detalles visuales al preparar el diseño.
 - Nombres y direcciones de los lugares, correo, redes y datos concretos de pago al preparar el contenido correspondiente.
@@ -309,11 +308,11 @@ Estas cuestiones no amplían el briefing ni se consideran todas condiciones prev
 
 ## 11. Orden acordado y próximos pasos
 
-El repositorio GitHub ya está creado. El orden pendiente es **briefing y respuestas -> revisar accesos y preparar GitHub Projects -> Product Backlog -> planificación y ejecución de los sprints**. El calendario original del enunciado, conservado en la sección 7, agrupa backlog y creación del repositorio en el Planning 1; aquí se prepara antes la infraestructura para trabajar después sobre ella.
+El repositorio GitHub ya está creado. El orden pendiente es **briefing y respuestas -> completar ficha 2 y revisar accesos del Project ya configurado -> Product Backlog -> planificación y ejecución de los sprints**. El calendario original del enunciado, conservado en la sección 7, agrupa backlog y creación del repositorio en el Planning 1; aquí se prepara antes la infraestructura para trabajar después sobre ella.
 
-1. Usar las nueve preguntas seleccionadas en [briefing-inicial.md](briefing-inicial.md). Revisar conjuntamente las respuestas más adelante e incorporar entonces las decisiones a requisitos y fichas 1 y 2; el resto de dudas se resolverá cuando se necesite.
+1. Usar las siete preguntas seleccionadas en [briefing-inicial.md](briefing-inicial.md). Revisar conjuntamente las respuestas más adelante e incorporar entonces las decisiones a requisitos y fichas 1 y 2; el resto de dudas se resolverá cuando se necesite.
 2. Revisar los accesos del repositorio GitHub ya creado, invitar a compañeros y profesora y completar la estructura y el README inicial. Cada miembro usa su identidad de Git; los demás clonan el mismo repositorio.
-3. Crear el Project con Por hacer / En curso / Hecho y acordar acceso. El tablero queda preparado para incorporar el backlog a continuación.
+3. Mantener el [Project ya configurado](https://github.com/users/LeoAstray/projects/1/views/2) con Por hacer / En curso / Hecho y comprobar acceso del equipo. Completar la [tarea de la ficha 2](https://github.com/LeoAstray/Nodo-Norte-Bootstrap/issues/1) antes de elaborar el backlog.
 4. Preparar la ficha 3: copiar historias con sus IDs, añadir tareas técnicas/de diseño, acordar Product Goal y prioridades, estimar incluidas pruebas y comprobar capacidad. Esta tarea queda para después de las fases anteriores.
 5. Planificar Sprint 1: Scrum Master, Sprint Goal y tareas de una sesión o menos en ficha 4/tablero, con responsables.
 6. Sprint 1: Daily, wireframes, moodboard, guía y plantilla base. Review de 4 minutos, retrospectiva y registro de cambios.
