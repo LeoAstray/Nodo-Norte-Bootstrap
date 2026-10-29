@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nodo Norte · Mockup de portada</title>
+
+  <!-- Tipografías: Audiowide (títulos), Inter (texto), IBM Plex Mono (fechas y etiquetas), Silkscreen (tags cortos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 desde CDN oficial -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== Paleta oficial de la guía de estilos ===== */
+    :root {
+      --nn-azul-noche: #101522;   /* Fondo principal */
+      --nn-violeta: #8B5CF6;      /* Identidad de marca */
+      --nn-cian: #35F2FF;         /* Acento principal */
+      --nn-magenta: #FF3CAC;      /* Acento secundario */
+      --nn-blanco-frio: #F4F7FF;  /* Texto principal */
+      --nn-ciruela: #25213B;      /* Paneles destacados */
+
+      /* Tipografías de la guía */
+      --nn-font-titulos: "Audiowide", sans-serif;
+      --nn-font-texto: "Inter", system-ui, sans-serif;
+      --nn-font-mono: "IBM Plex Mono", monospace;
+      --nn-font-pixel: "Silkscreen", monospace;
+
+      /* Sobrescritura de Bootstrap con la paleta */
+      --bs-body-font-family: var(--nn-font-texto);
+      --bs-body-color: var(--nn-blanco-frio);
+      --bs-body-bg: var(--nn-azul-noche);
+      --bs-link-color: var(--nn-cian);
+      --bs-link-hover-color: var(--nn-magenta);
+      --bs-border-color: rgba(139, 92, 246, 0.35);
+    }
+
+    body {
+      background: var(--nn-azul-noche);
+      color: var(--nn-blanco-frio);
+      font-family: var(--nn-font-texto);
+      line-height: 1.6;
+    }
+
+    /* Títulos con Audiowide (un solo peso: no usar fw-bold) */
+    h1, h2, h3 {
+      font-family: var(--nn-font-titulos);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      color: var(--nn-blanco-frio);
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
+    h3 { font-size: 1.25rem; }
+
+    /* Fechas, etiquetas y datos con IBM Plex Mono */
+    .nn-mono { font-family: var(--nn-font-mono); font-size: 0.875rem; letter-spacing: 0.02em; }
+    .nn-mono-fecha { font-family: var(--nn-font-mono); font-size: 0.875rem; color: var(--nn-cian); }
+
+    /* Tags con Silkscreen (solo textos muy cortos) */
+    .nn-pixel {
+      font-family: var(--nn-font-pixel);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.55rem;
+      border-radius: 0.25rem;
+      display: inline-block;
+    }
+    .nn-tag-inicial  { background: var(--nn-cian);          color: var(--nn-azul-noche); }
+    .nn-tag-medio    { background: var(--nn-blanco-frio);   color: var(--nn-azul-noche); }
+    .nn-tag-avanzado { background: var(--nn-magenta);       color: var(--nn-azul-noche); }
+
+    /* Logo oficial recortado de la guía */
+    .nn-logo img { height: 56px; width: auto; display: block; }
+    .nn-logo-footer img { height: 64px; width: auto; display: block; }
+
+    /* Navbar */
+    .nn-navbar { background: var(--nn-azul-noche); border-bottom: 1px solid rgba(139, 92, 246, 0.35); }
+    .nn-navbar .nav-link { color: var(--nn-blanco-frio); font-weight: 500; }
+    .nn-navbar .nav-link:hover { color: var(--nn-cian); }
+    .nn-navbar .nav-link.active { color: var(--nn-cian); border-bottom: 2px solid var(--nn-cian); }
+
+    /* Botones: cian con texto oscuro (contraste alto) */
+    .btn-nn {
+      background: var(--nn-cian); color: var(--nn-azul-noche); border: 0;
+      font-weight: 600; border-radius: 999px; padding: 0.7rem 1.4rem;
+    }
+    .btn-nn:hover, .btn-nn:focus-visible { background: var(--nn-blanco-frio); color: var(--nn-azul-noche); }
+    .btn-nn-outline {
+      border: 2px solid var(--nn-violeta); color: var(--nn-blanco-frio); background: transparent;
+      font-weight: 600; border-radius: 999px; padding: 0.6rem 1.3rem;
+    }
+    .btn-nn-outline:hover { background: var(--nn-violeta); color: var(--nn-blanco-frio); }
+    /* Estado "aforo completo": color distinto y texto explícito (Q03) */
+    .btn-nn-completo {
+      background: rgba(244, 247, 255, 0.12); color: #C9CEDD; border: 1px dashed #C9CEDD;
+      border-radius: 999px; font-weight: 600; padding: 0.7rem 1.4rem; cursor: not-allowed;
+    }
+
+    /* Foco visible (requisito de accesibilidad) */
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid var(--nn-magenta); outline-offset: 3px;
+    }
+
+    /* Portada: degradados de la identidad sobre el fondo oscuro */
+    .nn-hero {
+      background:
+        radial-gradient(circle at 85% 15%, rgba(139, 92, 246, 0.35), transparent 45%),
+        radial-gradient(circle at 8% 92%, rgba(53, 242, 255, 0.18), transparent 40%),
+        var(--nn-azul-noche);
+      padding: 4rem 0;
+    }
+    .nn-acento { color: var(--nn-cian); }
+
+    /* Tarjeta de próximo evento (HU-02) */
+    .nn-proximo {
+      background: var(--nn-ciruela); border-radius: 1.25rem; padding: 1.75rem;
+      border-left: 6px solid var(--nn-magenta);
+      box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Tarjetas de eventos (HU-04) */
+    .nn-card {
+      background: var(--nn-ciruela); border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: 1rem; height: 100%; transition: transform .2s ease, border-color .2s ease;
+    }
+    .nn-card:hover { transform: translateY(-3px); border-color: var(--nn-cian); }
+    .nn-plazas-libres { color: var(--nn-cian); font-weight: 600; }
+    .nn-texto-suave { color: #C9CEDD; }
+
+    /* Franja de fotos (HU-03) */
+    .nn-foto {
+      aspect-ratio: 4 / 3; border-radius: 0.75rem;
+      background: linear-gradient(135deg, var(--nn-violeta), var(--nn-magenta));
+      position: relative; overflow: hidden;
+    }
+    .nn-foto::after {
+      content: "Foto de ejemplo"; position: absolute; left: .75rem; bottom: .75rem;
+      font-family: var(--nn-font-mono); font-size: .75rem; color: var(--nn-blanco-frio);
+      background: rgba(16, 21, 34, .75); padding: .2rem .5rem; border-radius: .25rem;
+    }
+
+    /* Campos de formulario con la paleta */
+    .nn-form-footer .form-control {
+      background: var(--nn-azul-noche); border: 1px solid var(--nn-violeta);
+      color: var(--nn-blanco-frio);
+    }
+    .nn-form-footer .form-control::placeholder { color: #9AA3B8; }
+    .nn-form-footer .form-control:focus {
+      background: var(--nn-azul-noche); color: var(--nn-blanco-frio);
+      border-color: var(--nn-cian); box-shadow: 0 0 0 3px rgba(53, 242, 255, 0.35);
+    }
+
+    /* Footer en panel destacado (ciruela) */
+    footer.nn-footer { background: var(--nn-ciruela); border-top: 1px solid rgba(139, 92, 246, 0.35); }
+    footer.nn-footer a { color: var(--nn-blanco-frio); text-decoration: none; }
+    footer.nn-footer a:hover, footer.nn-footer a:focus-visible { color: var(--nn-cian); text-decoration: underline; }
+
+    /* Modal con la paleta */
+    .nn-modal .modal-content { background: var(--nn-ciruela); color: var(--nn-blanco-frio); border: 1px solid var(--nn-violeta); border-radius: 1rem; }
+    .nn-modal .btn-close { filter: invert(1); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar: horizontal en escritorio, desplegable en móvil (HU-01) -->
+  <header>
+    <nav class="navbar navbar-expand-lg nn-navbar sticky-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="nn-logo navbar-brand p-0" href="#" aria-label="Nodo Norte, inicio">
+          <img src="logo-nodo-norte.png" alt="Nodo Norte. Comunidad tecnológica A Coruña">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Únete</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Portada: próximo evento destacado (HU-02) -->
+    <section class="nn-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-7">
+            <p class="nn-mono mb-2 nn-acento">Charlas · Talleres · Hackatones</p>
+            <h1 class="mb-3">Tecnología que <span class="nn-acento">nos conecta</span></h1>
+            <p class="fs-5 mb-4 nn-texto-suave" style="max-width: 36rem;">
+              Una comunidad de estudiantes y profesionales de A Coruña que aprende compartiendo y apuesta por el software libre.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#" class="btn btn-nn">Apuntarme al próximo evento <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              <a href="#" class="btn btn-nn-outline">Hazte socio</a>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <article class="nn-proximo" aria-labelledby="proximo-titulo">
+              <p class="nn-mono mb-1 nn-texto-suave">Próximo evento</p>
+              <p class="nn-mono-fecha fw-medium mb-3">MAR 03.11.2026 · 19:00</p>
+              <h2 id="proximo-titulo" class="h3 mb-3">Introducción a Bootstrap 5.3</h2>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="nn-pixel nn-tag-inicial">Nivel: inicial</span>
+                <span class="nn-pixel" style="background: transparent; border: 1px solid var(--nn-blanco-frio); color: var(--nn-blanco-frio);">Lugar por confirmar</span>
+              </div>
+              <p class="mb-4 small nn-texto-suave">Ponente de ejemplo · <span class="nn-plazas-libres">18 de 30 plazas libres</span></p>
+              <a href="#" class="btn btn-nn w-100">Inscribirme</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendario de eventos (HU-04) con cards y estado de aforo (Q03) -->
+    <section class="py-5" aria-labelledby="eventos-titulo">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+          <div>
+            <p class="nn-mono mb-1 nn-acento">Calendario</p>
+            <h2 id="eventos-titulo" class="mb-0">Próximos eventos</h2>
+          </div>
+          <a href="#" class="fw-semibold">Ver todos</a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="nn-card p-4">
+              <p class="nn-mono-fecha mb-2">MAR 03.11.2026 · 19:00</p>
+              <h3 class="mb-2">Introducción a Bootstrap 5.3</h3>
+              <p class="small nn-texto-suave mb-3">Ponente de ejemplo. Descripción corta del evento.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="nn-pixel nn-tag-inicial">Inicial</span>
+                <span class="nn-plazas-libres small">18 libres</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-nn-outline btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalPonente">Ver ponente</button>
+                <a href="#" class="btn btn-nn btn-sm">Apuntarme</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="nn-card p-4">
+              <p class="nn-mono-fecha mb-2">MAR 01.12.2026 · 19:00</p>
+              <h3 class="mb-2">Hackatón de arranque</h3>
+              <p class="small nn-texto-suave mb-3">Ejemplo de evento de nivel medio.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="nn-pixel nn-tag-medio">Medio</span>
+                <span class="nn-plazas-libres small">6 libres</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-nn-outline btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalPonente">Ver ponente</button>
+                <a href="#" class="btn btn-nn btn-sm">Apuntarme</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="nn-card p-4">
+              <p class="nn-mono-fecha mb-2">JUE 14.01.2027 · 19:30</p>
+              <h3 class="mb-2">Accesibilidad web en la práctica</h3>
+              <p class="small nn-texto-suave mb-3">Ejemplo de evento completo.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="nn-pixel nn-tag-avanzado">Avanzado</span>
+                <span class="small fw-semibold">0 libres</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-nn-outline btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalPonente">Ver ponente</button>
+                <button class="btn btn-nn-completo btn-sm" type="button" disabled>Aforo completo</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fotos de ediciones anteriores (HU-03) -->
+    <section class="py-5" style="background: var(--nn-ciruela);" aria-labelledby="fotos-titulo">
+      <div class="container">
+        <p class="nn-mono mb-1 nn-acento">Ediciones anteriores</p>
+        <h2 id="fotos-titulo" class="mb-4">Así son nuestros eventos</h2>
+        <div class="row g-3">
+          <div class="col-6 col-lg-3"><div class="nn-foto" role="img" aria-label="Foto de ejemplo de un evento"></div></div>
+          <div class="col-6 col-lg-3"><div class="nn-foto" role="img" aria-label="Foto de ejemplo de un evento" style="background: linear-gradient(135deg, var(--nn-cian), var(--nn-violeta));"></div></div>
+          <div class="col-6 col-lg-3"><div class="nn-foto" role="img" aria-label="Foto de ejemplo de un evento" style="background: linear-gradient(135deg, var(--nn-magenta), var(--nn-cian));"></div></div>
+          <div class="col-6 col-lg-3"><div class="nn-foto" role="img" aria-label="Foto de ejemplo de un evento" style="background: linear-gradient(135deg, var(--nn-ciruela), var(--nn-violeta));"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer con newsletter (HU-09) y dos columnas mínimo -->
+  <footer class="nn-footer py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-4">
+          <div class="nn-logo-footer mb-3"><img src="logo-nodo-norte.png" alt="Nodo Norte. Comunidad tecnológica A Coruña"></div>
+          <p class="small mb-0 nn-texto-suave">Comunidad tecnológica sin ánimo de lucro · A Coruña</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h3 class="h6 nn-mono nn-acento mb-3">Web</h3>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="#">Inicio</a></li>
+            <li class="mb-2"><a href="#">Eventos</a></li>
+            <li class="mb-2"><a href="#">Únete</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="h6 nn-mono nn-acento mb-3">Redes</h3>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="#"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a></li>
+            <li class="mb-2"><a href="#"><i class="bi bi-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+            <li class="mb-2"><a href="#"><i class="bi bi-bluesky" aria-hidden="true"></i> Bluesky</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <h3 class="h6 nn-mono nn-acento mb-3">Newsletter</h3>
+          <form class="nn-form-footer needs-validation" novalidate>
+            <label for="correo-footer" class="form-label small">Recibe los eventos del mes</label>
+            <div class="input-group">
+              <input id="correo-footer" type="email" class="form-control" placeholder="tu@correo.com" required>
+              <button class="btn btn-nn" type="submit">Apuntarme</button>
+              <div class="invalid-feedback">Introduce un correo válido.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4" style="border-color: rgba(139, 92, 246, 0.35);">
+      <p class="small mb-0 nn-mono nn-texto-suave">© Nodo Norte · Contacto por correo electrónico</p>
+    </div>
+  </footer>
+
+  <!-- Modal de ficha de ponente (HU-05) -->
+  <div class="modal fade nn-modal" id="modalPonente" tabindex="-1" aria-labelledby="modalPonenteTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h2 class="modal-title h5" id="modalPonenteTitulo">Ficha de ponente</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body pt-0">
+          <p class="nn-mono nn-acento mb-1">Ponente de ejemplo</p>
+          <p class="mb-3 nn-texto-suave">Biografía breve del ponente. Contenido de ejemplo para la maqueta.</p>
+          <span class="nn-pixel nn-tag-inicial">Nivel: inicial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
