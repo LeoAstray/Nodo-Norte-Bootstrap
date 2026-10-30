@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nodo Norte · Eventos</title>
+
+  <!-- Tipografías: Audiowide (títulos), Inter (texto), IBM Plex Mono (fechas y datos), Silkscreen (etiquetas cortas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 y Bootstrap Icons desde CDN oficial -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== Paleta oficial de la guía ===== */
+    :root {
+      --nn-azul-noche: #101522;
+      --nn-violeta: #8B5CF6;
+      --nn-cian: #35F2FF;
+      --nn-magenta: #FF3CAC;
+      --nn-blanco-frio: #F4F7FF;
+      --nn-ciruela: #25213B;
+      --nn-texto-suave: #C9CEDD;
+
+      --nn-font-titulos: "Audiowide", sans-serif;
+      --nn-font-texto: "Inter", system-ui, sans-serif;
+      --nn-font-mono: "IBM Plex Mono", monospace;
+      --nn-font-pixel: "Silkscreen", monospace;
+
+      --bs-body-font-family: var(--nn-font-texto);
+      --bs-body-color: var(--nn-blanco-frio);
+      --bs-body-bg: var(--nn-azul-noche);
+      --bs-link-color: var(--nn-cian);
+      --bs-link-hover-color: var(--nn-magenta);
+      --bs-border-color: rgba(139, 92, 246, 0.35);
+      --bs-table-bg: transparent;
+      --bs-table-color: var(--nn-blanco-frio);
+      --bs-table-striped-bg: rgba(139, 92, 246, 0.08);
+      --bs-table-hover-bg: rgba(53, 242, 255, 0.08);
+    }
+
+    body { background: var(--nn-azul-noche); color: var(--nn-blanco-frio); font-family: var(--nn-font-texto); line-height: 1.6; }
+
+    h1, h2, h3 { font-family: var(--nn-font-titulos); font-weight: 400; line-height: 1.2; color: var(--nn-blanco-frio); }
+    h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+    h3 { font-size: 1.2rem; }
+
+    .nn-mono { font-family: var(--nn-font-mono); font-size: .875rem; letter-spacing: .02em; }
+    .nn-fecha { font-family: var(--nn-font-mono); font-size: .875rem; color: var(--nn-cian); }
+    .nn-acento { color: var(--nn-cian); }
+    .nn-texto-suave { color: var(--nn-texto-suave); }
+
+    /* Etiquetas cortas: Silkscreen */
+    .nn-pixel { font-family: var(--nn-font-pixel); font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; padding: .25rem .55rem; border-radius: .25rem; display: inline-block; }
+    .nn-tag-inicial  { background: var(--nn-cian); color: var(--nn-azul-noche); }
+    .nn-tag-medio    { background: var(--nn-blanco-frio); color: var(--nn-azul-noche); }
+    .nn-tag-avanzado { background: var(--nn-magenta); color: var(--nn-azul-noche); }
+    .nn-tag-outline  { background: transparent; border: 1px solid var(--nn-blanco-frio); color: var(--nn-blanco-frio); }
+
+    /* Logo */
+    .nn-logo img { height: 56px; width: auto; display: block; }
+    .nn-logo-footer img { height: 64px; width: auto; display: block; }
+
+    /* Navbar */
+    .nn-navbar { background: var(--nn-azul-noche); border-bottom: 1px solid rgba(139, 92, 246, .35); }
+    .nn-navbar .nav-link { color: var(--nn-blanco-frio); font-weight: 500; }
+    .nn-navbar .nav-link:hover { color: var(--nn-cian); }
+    .nn-navbar .nav-link.active { color: var(--nn-cian); border-bottom: 2px solid var(--nn-cian); }
+
+    /* Botones */
+    .btn-nn { background: var(--nn-cian); color: var(--nn-azul-noche); border: 0; font-weight: 600; border-radius: 999px; padding: .65rem 1.3rem; }
+    .btn-nn:hover, .btn-nn:focus-visible { background: var(--nn-blanco-frio); color: var(--nn-azul-noche); }
+    .btn-nn-outline { border: 2px solid var(--nn-violeta); color: var(--nn-blanco-frio); background: transparent; font-weight: 600; border-radius: 999px; padding: .55rem 1.2rem; }
+    .btn-nn-outline:hover { background: var(--nn-violeta); color: var(--nn-blanco-frio); }
+    .btn-nn-completo { background: rgba(244, 247, 255, .12); color: var(--nn-texto-suave); border: 1px dashed var(--nn-texto-suave); border-radius: 999px; font-weight: 600; cursor: not-allowed; }
+    .btn-filtro { border: 1px solid var(--nn-violeta); color: var(--nn-blanco-frio); background: transparent; border-radius: 999px; font-size: .9rem; padding: .35rem .9rem; }
+    .btn-filtro.active, .btn-filtro:hover { background: var(--nn-violeta); color: var(--nn-blanco-frio); }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--nn-magenta); outline-offset: 3px;
+    }
+
+    /* Cabecera de página */
+    .nn-cabecera { background: radial-gradient(circle at 90% 10%, rgba(139, 92, 246, .3), transparent 45%), var(--nn-azul-noche); padding: 3.5rem 0 2.5rem; }
+
+    /* Cards de eventos (HU-04) */
+    .nn-card { background: var(--nn-ciruela); border: 1px solid rgba(139, 92, 246, .35); border-radius: 1rem; height: 100%; transition: transform .2s ease, border-color .2s ease; }
+    .nn-card:hover { transform: translateY(-3px); border-color: var(--nn-cian); }
+    .nn-plazas-libres { color: var(--nn-cian); font-weight: 600; }
+
+    /* Tabla de calendario (requisito: table-striped y table-hover) */
+    .nn-tabla-wrap { background: var(--nn-ciruela); border-radius: 1rem; border: 1px solid rgba(139, 92, 246, .35); overflow: hidden; }
+    .nn-tabla thead th { font-family: var(--nn-font-mono); font-size: .8rem; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; color: var(--nn-cian); border-bottom: 1px solid rgba(139, 92, 246, .35); }
+    .nn-tabla td { vertical-align: middle; }
+
+    /* Galería (HU-03) */
+    .nn-foto { aspect-ratio: 4 / 3; border-radius: .75rem; background: linear-gradient(135deg, var(--nn-violeta), var(--nn-magenta)); position: relative; overflow: hidden; }
+    .nn-foto::after { content: "Foto de ejemplo"; position: absolute; left: .6rem; bottom: .6rem; font-family: var(--nn-font-mono); font-size: .72rem; color: var(--nn-blanco-frio); background: rgba(16, 21, 34, .75); padding: .15rem .45rem; border-radius: .25rem; }
+
+    /* Filtros (formulario con select) */
+    .nn-select { background: var(--nn-azul-noche); border: 1px solid var(--nn-violeta); color: var(--nn-blanco-frio); border-radius: .5rem; }
+    .nn-select:focus { background: var(--nn-azul-noche); color: var(--nn-blanco-frio); border-color: var(--nn-cian); box-shadow: 0 0 0 3px rgba(53, 242, 255, .35); }
+
+    footer.nn-footer { background: var(--nn-ciruela); border-top: 1px solid rgba(139, 92, 246, .35); }
+    footer.nn-footer a { color: var(--nn-blanco-frio); text-decoration: none; }
+    footer.nn-footer a:hover, footer.nn-footer a:focus-visible { color: var(--nn-cian); text-decoration: underline; }
+    .nn-form-footer .form-control { background: var(--nn-azul-noche); border: 1px solid var(--nn-violeta); color: var(--nn-blanco-frio); }
+    .nn-form-footer .form-control::placeholder { color: #9AA3B8; }
+    .nn-form-footer .form-control:focus { background: var(--nn-azul-noche); color: var(--nn-blanco-frio); border-color: var(--nn-cian); box-shadow: 0 0 0 3px rgba(53, 242, 255, .35); }
+
+    .nn-modal .modal-content { background: var(--nn-ciruela); color: var(--nn-blanco-frio); border: 1px solid var(--nn-violeta); border-radius: 1rem; }
+    .nn-modal .btn-close { filter: invert(1); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar con la página actual marcada (Eventos) -->
+  <header>
+    <nav class="navbar navbar-expand-lg nn-navbar sticky-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="nn-logo navbar-brand p-0" href="index.html" aria-label="Nodo Norte, inicio">
+          <img src="logo-nodo-norte.png" alt="Nodo Norte. Comunidad tecnológica A Coruña">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="eventos.html">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="unete.html">Únete</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Cabecera de la página -->
+    <section class="nn-cabecera">
+      <div class="container">
+        <p class="nn-mono nn-acento mb-2">Calendario · A Coruña · primer martes de cada mes</p>
+        <h1 class="mb-3">Eventos</h1>
+        <p class="fs-5 nn-texto-suave mb-0" style="max-width: 40rem;">Charlas, talleres y hackatones para aprender compartiendo. Apúntate a los próximos y mira cómo fueron los anteriores.</p>
+      </div>
+    </section>
+
+    <!-- Próximos eventos: filtros + cards (HU-04, HU-05, Q03) -->
+    <section class="py-5" aria-labelledby="proximos-titulo">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+          <div>
+            <p class="nn-mono nn-acento mb-1">Próximos</p>
+            <h2 id="proximos-titulo" class="mb-0">Qué viene</h2>
+          </div>
+          <form class="d-flex flex-wrap gap-2 align-items-center" role="search" aria-label="Filtrar eventos">
+            <label for="filtro-nivel" class="nn-mono nn-texto-suave mb-0">Nivel</label>
+            <select id="filtro-nivel" class="form-select nn-select" style="width: auto;">
+              <option selected>Todos</option>
+              <option>Inicial</option>
+              <option>Medio</option>
+              <option>Avanzado</option>
+            </select>
+          </form>
+        </div>
+
+        <div class="row g-4">
+          <!-- Evento con plazas libres -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="nn-card p-4">
+              <p class="nn-fecha mb-2">MAR 03.11.2026 · 19:00</p>
+              <h3 class="mb-2">Introducción a Bootstrap 5.3</h3>
+              <p class="small nn-texto-suave mb-3">Ponente de ejemplo · Descripción corta del evento.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="nn-pixel nn-tag-inicial">Inicial</span>
+                <span class="nn-plazas-libres small">18 de 30 libres</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-nn-outline btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalPonente">Ver ponente</button>
+                <a href="#" class="btn btn-nn btn-sm">Apuntarme</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Evento con pocas plazas -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="nn-card p-4">
+              <p class="nn-fecha mb-2">MAR 01.12.2026 · 19:00</p>
+              <h3 class="mb-2">Hackatón de arranque</h3>
+              <p class="small nn-texto-suave mb-3">Ejemplo de evento de nivel medio.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="nn-pixel nn-tag-medio">Medio</span>
+                <span class="nn-plazas-libres small">6 de 24 libres</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-nn-outline btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalPonente">Ver ponente</button>
+                <a href="#" class="btn btn-nn btn-sm">Apuntarme</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Evento completo: botón con color distinto y texto explícito (Q03) -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="nn-card p-4">
+              <p class="nn-fecha mb-2">JUE 14.01.2027 · 19:30</p>
+              <h3 class="mb-2">Accesibilidad web en la práctica</h3>
+              <p class="small nn-texto-suave mb-3">Ejemplo de evento completo.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="nn-pixel nn-tag-avanzado">Avanzado</span>
+                <span class="small fw-semibold">0 de 20 libres</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn btn-nn-outline btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#modalPonente">Ver ponente</button>
+                <button class="btn btn-nn-completo btn-sm" type="button" disabled>Aforo completo</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendario en tabla (requisito: table-striped y table-hover) -->
+    <section class="py-5" style="background: var(--nn-ciruela);" aria-labelledby="calendario-titulo">
+      <div class="container">
+        <p class="nn-mono nn-acento mb-1">Vista de calendario</p>
+        <h2 id="calendario-titulo" class="mb-4">Todas las fechas</h2>
+        <div class="nn-tabla-wrap table-responsive">
+          <table class="table table-striped table-hover nn-tabla mb-0">
+            <caption class="visually-hidden">Calendario de próximos eventos con fecha, título, nivel y plazas</caption>
+            <thead>
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Evento</th>
+                <th scope="col">Nivel</th>
+                <th scope="col">Plazas</th>
+                <th scope="col"><span class="visually-hidden">Acción</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="nn-fecha">03.11.2026</td>
+                <td>Introducción a Bootstrap 5.3</td>
+                <td><span class="nn-pixel nn-tag-inicial">Inicial</span></td>
+                <td class="nn-plazas-libres">18 libres</td>
+                <td class="text-end"><a href="#" class="btn btn-nn btn-sm">Apuntarme</a></td>
+              </tr>
+              <tr>
+                <td class="nn-fecha">01.12.2026</td>
+                <td>Hackatón de arranque</td>
+                <td><span class="nn-pixel nn-tag-medio">Medio</span></td>
+                <td class="nn-plazas-libres">6 libres</td>
+                <td class="text-end"><a href="#" class="btn btn-nn btn-sm">Apuntarme</a></td>
+              </tr>
+              <tr>
+                <td class="nn-fecha">14.01.2027</td>
+                <td>Accesibilidad web en la práctica</td>
+                <td><span class="nn-pixel nn-tag-avanzado">Avanzado</span></td>
+                <td class="small fw-semibold">Completo</td>
+                <td class="text-end"><button class="btn btn-nn-completo btn-sm" type="button" disabled>Aforo completo</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ediciones anteriores (HU-03) -->
+    <section class="py-5" aria-labelledby="pasados-titulo">
+      <div class="container">
+        <p class="nn-mono nn-acento mb-1">Ediciones anteriores</p>
+        <h2 id="pasados-titulo" class="mb-4">Así fueron</h2>
+        <div class="row g-3">
+          <div class="col-6 col-lg-3"><div class="nn-foto" role="img" aria-label="Foto de ejemplo de un evento anterior"></div></div>
+          <div class="col-6 col-lg-3"><div class="nn-foto" role="img" aria-label="Foto de ejemplo de un evento anterior" style="background: linear-gradient(135deg, var(--nn-cian), var(--nn-violeta));"></div></div>
+          <div class="col-6 col-lg-3"><div class="nn-foto" role="img" aria-label="Foto de ejemplo de un evento anterior" style="background: linear-gradient(135deg, var(--nn-magenta), var(--nn-cian));"></div></div>
+          <div class="col-6 col-lg-3"><div class="nn-foto" role="img" aria-label="Foto de ejemplo de un evento anterior" style="background: linear-gradient(135deg, var(--nn-ciruela), var(--nn-violeta));"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer con newsletter (HU-09) -->
+  <footer class="nn-footer py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-4">
+          <div class="nn-logo-footer mb-3"><img src="logo-nodo-norte.png" alt="Nodo Norte. Comunidad tecnológica A Coruña"></div>
+          <p class="small mb-0 nn-texto-suave">Comunidad tecnológica sin ánimo de lucro · A Coruña</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h3 class="h6 nn-mono nn-acento mb-3">Web</h3>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="index.html">Inicio</a></li>
+            <li class="mb-2"><a href="eventos.html">Eventos</a></li>
+            <li class="mb-2"><a href="unete.html">Únete</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="h6 nn-mono nn-acento mb-3">Redes</h3>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="#"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a></li>
+            <li class="mb-2"><a href="#"><i class="bi bi-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+            <li class="mb-2"><a href="#"><i class="bi bi-bluesky" aria-hidden="true"></i> Bluesky</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <h3 class="h6 nn-mono nn-acento mb-3">Newsletter</h3>
+          <form class="nn-form-footer needs-validation" novalidate>
+            <label for="correo-footer" class="form-label small">Recibe los eventos del mes</label>
+            <div class="input-group">
+              <input id="correo-footer" type="email" class="form-control" placeholder="tu@correo.com" required>
+              <button class="btn btn-nn" type="submit">Apuntarme</button>
+              <div class="invalid-feedback">Introduce un correo válido.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4" style="border-color: rgba(139, 92, 246, .35);">
+      <p class="small mb-0 nn-mono nn-texto-suave">© Nodo Norte · Contacto por correo electrónico</p>
+    </div>
+  </footer>
+
+  <!-- Modal de ficha de ponente (HU-05) -->
+  <div class="modal fade nn-modal" id="modalPonente" tabindex="-1" aria-labelledby="modalPonenteTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h2 class="modal-title h5" id="modalPonenteTitulo">Ficha de ponente</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body pt-0">
+          <p class="nn-mono nn-acento mb-1">Ponente de ejemplo</p>
+          <p class="mb-3 nn-texto-suave">Biografía breve del ponente. Contenido de ejemplo para la maqueta.</p>
+          <span class="nn-pixel nn-tag-inicial">Nivel: inicial</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

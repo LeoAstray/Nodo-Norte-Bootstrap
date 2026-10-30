@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nodo Norte · Únete</title>
+
+  <!-- Tipografías: Audiowide (títulos), Inter (texto), IBM Plex Mono (fechas y datos), Silkscreen (etiquetas cortas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 y Bootstrap Icons desde CDN oficial -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    /* ===== Paleta oficial de la guía ===== */
+    :root {
+      --nn-azul-noche: #101522;
+      --nn-violeta: #8B5CF6;
+      --nn-cian: #35F2FF;
+      --nn-magenta: #FF3CAC;
+      --nn-blanco-frio: #F4F7FF;
+      --nn-ciruela: #25213B;
+      --nn-texto-suave: #C9CEDD;
+
+      --nn-font-titulos: "Audiowide", sans-serif;
+      --nn-font-texto: "Inter", system-ui, sans-serif;
+      --nn-font-mono: "IBM Plex Mono", monospace;
+      --nn-font-pixel: "Silkscreen", monospace;
+
+      --bs-body-font-family: var(--nn-font-texto);
+      --bs-body-color: var(--nn-blanco-frio);
+      --bs-body-bg: var(--nn-azul-noche);
+      --bs-link-color: var(--nn-cian);
+      --bs-link-hover-color: var(--nn-magenta);
+      --bs-border-color: rgba(139, 92, 246, 0.35);
+      --bs-table-bg: transparent;
+      --bs-table-color: var(--nn-blanco-frio);
+      --bs-table-striped-bg: rgba(139, 92, 246, 0.08);
+      --bs-table-hover-bg: rgba(53, 242, 255, 0.08);
+    }
+
+    body { background: var(--nn-azul-noche); color: var(--nn-blanco-frio); font-family: var(--nn-font-texto); line-height: 1.6; }
+
+    h1, h2, h3 { font-family: var(--nn-font-titulos); font-weight: 400; line-height: 1.2; color: var(--nn-blanco-frio); }
+    h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+    h3 { font-size: 1.15rem; }
+
+    .nn-mono { font-family: var(--nn-font-mono); font-size: .875rem; letter-spacing: .02em; }
+    .nn-acento { color: var(--nn-cian); }
+    .nn-texto-suave { color: var(--nn-texto-suave); }
+
+    /* Etiquetas cortas: Silkscreen */
+    .nn-pixel { font-family: var(--nn-font-pixel); font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; padding: .25rem .55rem; border-radius: .25rem; display: inline-block; }
+    .nn-tag-inicial  { background: var(--nn-cian); color: var(--nn-azul-noche); }
+    .nn-tag-outline  { background: transparent; border: 1px solid var(--nn-blanco-frio); color: var(--nn-blanco-frio); }
+
+    /* Logo */
+    .nn-logo img { height: 56px; width: auto; display: block; }
+    .nn-logo-footer img { height: 64px; width: auto; display: block; }
+
+    /* Navbar */
+    .nn-navbar { background: var(--nn-azul-noche); border-bottom: 1px solid rgba(139, 92, 246, .35); }
+    .nn-navbar .nav-link { color: var(--nn-blanco-frio); font-weight: 500; }
+    .nn-navbar .nav-link:hover { color: var(--nn-cian); }
+    .nn-navbar .nav-link.active { color: var(--nn-cian); border-bottom: 2px solid var(--nn-cian); }
+
+    /* Botones */
+    .btn-nn { background: var(--nn-cian); color: var(--nn-azul-noche); border: 0; font-weight: 600; border-radius: 999px; padding: .65rem 1.3rem; }
+    .btn-nn:hover, .btn-nn:focus-visible { background: var(--nn-blanco-frio); color: var(--nn-azul-noche); }
+    .btn-nn-outline { border: 2px solid var(--nn-violeta); color: var(--nn-blanco-frio); background: transparent; font-weight: 600; border-radius: 999px; padding: .55rem 1.2rem; }
+    .btn-nn-outline:hover { background: var(--nn-violeta); color: var(--nn-blanco-frio); }
+
+    /* Pestañas de las tres acciones (Únete) */
+    .nav-tabs-nn { border-bottom: 1px solid rgba(139, 92, 246, .35); gap: .5rem; }
+    .nav-tabs-nn .nav-link { color: var(--nn-texto-suave); border: 0; border-bottom: 3px solid transparent; font-family: var(--nn-font-titulos); font-size: .95rem; padding: .75rem 1rem; }
+    .nav-tabs-nn .nav-link:hover { color: var(--nn-blanco-frio); }
+    .nav-tabs-nn .nav-link.active { color: var(--nn-cian); background: transparent; border-bottom: 3px solid var(--nn-cian); }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--nn-magenta); outline-offset: 3px;
+    }
+
+    .nn-cabecera { background: radial-gradient(circle at 90% 10%, rgba(139, 92, 246, .3), transparent 45%), var(--nn-azul-noche); padding: 3.5rem 0 2.5rem; }
+
+    /* Paneles y formularios */
+    .nn-panel { background: var(--nn-ciruela); border: 1px solid rgba(139, 92, 246, .35); border-radius: 1rem; }
+    .form-control, .form-select, .form-check-input {
+      background-color: var(--nn-azul-noche); border: 1px solid var(--nn-violeta); color: var(--nn-blanco-frio);
+    }
+    .form-control::placeholder { color: #9AA3B8; }
+    .form-control:focus, .form-select:focus {
+      background-color: var(--nn-azul-noche); color: var(--nn-blanco-frio);
+      border-color: var(--nn-cian); box-shadow: 0 0 0 3px rgba(53, 242, 255, .35);
+    }
+    .form-check-input:checked { background-color: var(--nn-cian); border-color: var(--nn-cian); }
+    .form-label { font-weight: 500; }
+    .nn-ayuda { color: var(--nn-texto-suave); font-size: .85rem; }
+    .btn-enviar { background: var(--nn-cian); color: var(--nn-azul-noche); border: 0; font-weight: 600; border-radius: 999px; padding: .75rem 1.6rem; }
+    .btn-enviar:hover, .btn-enviar:focus-visible { background: var(--nn-blanco-frio); color: var(--nn-azul-noche); }
+
+    /* Tabla de cuotas (requisito: table-striped y table-hover) */
+    .nn-tabla-wrap { background: var(--nn-ciruela); border-radius: 1rem; border: 1px solid rgba(139, 92, 246, .35); overflow: hidden; }
+    .nn-tabla thead th { font-family: var(--nn-font-mono); font-size: .8rem; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; color: var(--nn-cian); border-bottom: 1px solid rgba(139, 92, 246, .35); }
+    .nn-tabla td { vertical-align: middle; }
+
+    footer.nn-footer { background: var(--nn-ciruela); border-top: 1px solid rgba(139, 92, 246, .35); }
+    footer.nn-footer a { color: var(--nn-blanco-frio); text-decoration: none; }
+    footer.nn-footer a:hover, footer.nn-footer a:focus-visible { color: var(--nn-cian); text-decoration: underline; }
+    .nn-form-footer .form-control { background: var(--nn-azul-noche); border: 1px solid var(--nn-violeta); color: var(--nn-blanco-frio); }
+    .nn-form-footer .form-control::placeholder { color: #9AA3B8; }
+    .nn-form-footer .form-control:focus { background: var(--nn-azul-noche); color: var(--nn-blanco-frio); border-color: var(--nn-cian); box-shadow: 0 0 0 3px rgba(53, 242, 255, .35); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar con la página actual marcada (Únete) -->
+  <header>
+    <nav class="navbar navbar-expand-lg nn-navbar sticky-top" aria-label="Navegación principal">
+      <div class="container">
+        <a class="nn-logo navbar-brand p-0" href="index.html" aria-label="Nodo Norte, inicio">
+          <img src="logo-nodo-norte.png" alt="Nodo Norte. Comunidad tecnológica A Coruña">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="unete.html">Únete</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Cabecera -->
+    <section class="nn-cabecera">
+      <div class="container">
+        <p class="nn-mono nn-acento mb-2">Forma parte de la comunidad</p>
+        <h1 class="mb-3">Únete</h1>
+        <p class="fs-5 nn-texto-suave mb-0" style="max-width: 40rem;">Apúntate a un evento, hazte socio o propón una charla. Todo se gestiona con un formulario.</p>
+      </div>
+    </section>
+
+    <section class="py-5" aria-labelledby="acciones-titulo">
+      <div class="container">
+        <h2 id="acciones-titulo" class="visually-hidden">Acciones</h2>
+
+        <!-- Pestañas: las tres acciones solicitadas por el cliente -->
+        <ul class="nav nav-tabs nav-tabs-nn mb-4" id="accionesTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab-inscripcion" data-bs-toggle="tab" data-bs-target="#panel-inscripcion" type="button" role="tab" aria-controls="panel-inscripcion" aria-selected="true">Inscribirme a un evento</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-socio" data-bs-toggle="tab" data-bs-target="#panel-socio" type="button" role="tab" aria-controls="panel-socio" aria-selected="false">Hacerme socio</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-charla" data-bs-toggle="tab" data-bs-target="#panel-charla" type="button" role="tab" aria-controls="panel-charla" aria-selected="false">Proponer una charla</button>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <!-- 1. Inscripción a evento (HU-06). Si ya eres socio, solo botón. -->
+          <div class="tab-pane fade show active" id="panel-inscripcion" role="tabpanel" aria-labelledby="tab-inscripcion" tabindex="0">
+            <div class="row g-4">
+              <div class="col-12 col-lg-7">
+                <div class="nn-panel p-4 p-lg-5">
+                  <h3 class="mb-2">Inscripción a un evento</h3>
+                  <p class="nn-texto-suave mb-4">Elige el evento y completa tus datos. Si ya eres socio, basta con pulsar «Inscribirme».</p>
+                  <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <label for="ins-evento" class="form-label">Evento</label>
+                        <select id="ins-evento" class="form-select" required>
+                          <option value="" selected disabled>Elige un evento</option>
+                          <option>Introducción a Bootstrap 5.3 · 03.11.2026</option>
+                          <option>Hackatón de arranque · 01.12.2026</option>
+                        </select>
+                        <div class="invalid-feedback">Selecciona un evento.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ins-nombre" class="form-label">Nombre</label>
+                        <input id="ins-nombre" type="text" class="form-control" required>
+                        <div class="invalid-feedback">Escribe tu nombre.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ins-apellidos" class="form-label">Apellidos</label>
+                        <input id="ins-apellidos" type="text" class="form-control" required>
+                        <div class="invalid-feedback">Escribe tus apellidos.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ins-mail" class="form-label">Correo electrónico</label>
+                        <input id="ins-mail" type="email" class="form-control" required>
+                        <div class="invalid-feedback">Introduce un correo válido.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ins-nacimiento" class="form-label">Fecha de nacimiento</label>
+                        <input id="ins-nacimiento" type="date" class="form-control" required>
+                        <div class="invalid-feedback">Indica tu fecha de nacimiento.</div>
+                      </div>
+                      <div class="col-12">
+                        <label for="ins-intereses" class="form-label">Intereses</label>
+                        <select id="ins-intereses" class="form-select" multiple size="3">
+                          <option>Front-end</option>
+                          <option>Back-end</option>
+                          <option>Accesibilidad</option>
+                          <option>Software libre</option>
+                        </select>
+                        <div class="nn-ayuda mt-1">Mantén Ctrl (o Cmd) para elegir varios.</div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="ins-privacidad" required>
+                          <label class="form-check-label" for="ins-privacidad">Acepto que se use mi correo para avisarme del evento.</label>
+                          <div class="invalid-feedback">Necesitamos tu aceptación para continuar.</div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn-enviar">Inscribirme</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-5">
+                <div class="nn-panel p-4">
+                  <p class="nn-mono nn-acento mb-2">Ya eres socio</p>
+                  <h3 class="mb-2">Inscripción directa</h3>
+                  <p class="nn-texto-suave mb-3">Las plazas de socio están garantizadas hasta 2 días antes del evento. Si llega la fecha en que se liberan, dejan de estarlo.</p>
+                  <button type="button" class="btn-nn-outline">Inscribirme con mi cuenta de socio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Alta de socio (HU-07). Mismos campos que la charla más el DNI (Q06). -->
+          <div class="tab-pane fade" id="panel-socio" role="tabpanel" aria-labelledby="tab-socio" tabindex="0">
+            <div class="row g-4">
+              <div class="col-12 col-lg-5">
+                <div class="nn-panel p-4 h-100">
+                  <p class="nn-mono nn-acento mb-2">Cuota voluntaria</p>
+                  <h3 class="mb-3">Qué incluye ser socio</h3>
+                  <p class="nn-texto-suave">La cuota es voluntaria: 10 € al año. No hace falta pagarla para participar, pero aportarla ayuda a la comunidad.</p>
+                  <div class="table-responsive nn-tabla-wrap mb-3">
+                    <table class="table table-striped table-hover nn-tabla mb-0">
+                      <caption class="visually-hidden">Modalidades de participación y cuota</caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Modalidad</th>
+                          <th scope="col">Cuota</th>
+                          <th scope="col">Plaza</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Socio</td>
+                          <td>10 € / año (voluntaria)</td>
+                          <td>Garantizada</td>
+                        </tr>
+                        <tr>
+                          <td>Asistente</td>
+                          <td>Gratuita</td>
+                          <td>Sujeta a disponibilidad</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="nn-ayuda mb-0">Métodos de pago mencionados: transferencia y PayPal. Ver el aviso de pago al enviar.</p>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-7">
+                <div class="nn-panel p-4 p-lg-5">
+                  <h3 class="mb-2">Alta de socio</h3>
+                  <p class="nn-texto-suave mb-4">Rellena tus datos y te diremos cómo completar la cuota.</p>
+                  <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                      <div class="col-12 col-md-6">
+                        <label for="soc-nombre" class="form-label">Nombre</label>
+                        <input id="soc-nombre" type="text" class="form-control" required>
+                        <div class="invalid-feedback">Escribe tu nombre.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="soc-apellidos" class="form-label">Apellidos</label>
+                        <input id="soc-apellidos" type="text" class="form-control" required>
+                        <div class="invalid-feedback">Escribe tus apellidos.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="soc-dni" class="form-label">DNI</label>
+                        <input id="soc-dni" type="text" class="form-control" pattern="[0-9]{8}[A-Za-z]" placeholder="12345678Z" required>
+                        <div class="invalid-feedback">Introduce un DNI válido (8 cifras y una letra).</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="soc-mail" class="form-label">Correo electrónico</label>
+                        <input id="soc-mail" type="email" class="form-control" required>
+                        <div class="invalid-feedback">Introduce un correo válido.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="soc-nacimiento" class="form-label">Fecha de nacimiento</label>
+                        <input id="soc-nacimiento" type="date" class="form-control" required>
+                        <div class="invalid-feedback">Indica tu fecha de nacimiento.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="soc-intereses" class="form-label">Intereses</label>
+                        <select id="soc-intereses" class="form-select" required>
+                          <option value="" selected disabled>Elige una opción</option>
+                          <option>Front-end</option>
+                          <option>Back-end</option>
+                          <option>Accesibilidad</option>
+                          <option>Software libre</option>
+                        </select>
+                        <div class="invalid-feedback">Elige un interés.</div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="soc-aportar">
+                          <label class="form-check-label" for="soc-aportar">Quiero aportar la cuota voluntaria de 10 € anuales.</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn-enviar">Enviar alta</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Propuesta de charla (HU-08). Mismos campos que el alta más el DNI (Q06). -->
+          <div class="tab-pane fade" id="panel-charla" role="tabpanel" aria-labelledby="tab-charla" tabindex="0">
+            <div class="row g-4">
+              <div class="col-12 col-lg-4">
+                <div class="nn-panel p-4 h-100">
+                  <p class="nn-mono nn-acento mb-2">Ponentes</p>
+                  <h3 class="mb-3">Comparte lo que sabes</h3>
+                  <p class="nn-texto-suave mb-0">Proponer una charla es la forma más directa de participar. Cuéntanos el tema, el nivel y cuánto durará.</p>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-8">
+                <div class="nn-panel p-4 p-lg-5">
+                  <h3 class="mb-4">Propuesta de charla</h3>
+                  <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <label for="ch-tema" class="form-label">Tema</label>
+                        <input id="ch-tema" type="text" class="form-control" required>
+                        <div class="invalid-feedback">Indica el tema de la charla.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ch-nivel" class="form-label">Nivel</label>
+                        <select id="ch-nivel" class="form-select" required>
+                          <option value="" selected disabled>Elige un nivel</option>
+                          <option>Inicial</option>
+                          <option>Medio</option>
+                          <option>Avanzado</option>
+                        </select>
+                        <div class="invalid-feedback">Elige un nivel.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ch-tipo" class="form-label">Tipo</label>
+                        <select id="ch-tipo" class="form-select" required>
+                          <option value="" selected disabled>Elige un tipo</option>
+                          <option>Charla</option>
+                          <option>Taller</option>
+                          <option>Hackatón</option>
+                        </select>
+                        <div class="invalid-feedback">Elige un tipo.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ch-duracion" class="form-label">Duración (minutos)</label>
+                        <input id="ch-duracion" type="number" min="10" max="120" step="5" class="form-control" required>
+                        <div class="invalid-feedback">Indica entre 10 y 120 minutos.</div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label for="ch-dni" class="form-label">DNI</label>
+                        <input id="ch-dni" type="text" class="form-control" pattern="[0-9]{8}[A-Za-z]" placeholder="12345678Z" required>
+                        <div class="invalid-feedback">Introduce un DNI válido (8 cifras y una letra).</div>
+                      </div>
+                      <div class="col-12">
+                        <label for="ch-descripcion" class="form-label">Descripción</label>
+                        <textarea id="ch-descripcion" class="form-control" rows="4" required></textarea>
+                        <div class="invalid-feedback">Escribe una descripción breve.</div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="btn-enviar">Enviar propuesta</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer con newsletter (HU-09) -->
+  <footer class="nn-footer py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-md-4">
+          <div class="nn-logo-footer mb-3"><img src="logo-nodo-norte.png" alt="Nodo Norte. Comunidad tecnológica A Coruña"></div>
+          <p class="small mb-0 nn-texto-suave">Comunidad tecnológica sin ánimo de lucro · A Coruña</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h3 class="h6 nn-mono nn-acento mb-3">Web</h3>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="index.html">Inicio</a></li>
+            <li class="mb-2"><a href="eventos.html">Eventos</a></li>
+            <li class="mb-2"><a href="unete.html">Únete</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="h6 nn-mono nn-acento mb-3">Redes</h3>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="#"><i class="bi bi-instagram" aria-hidden="true"></i> Instagram</a></li>
+            <li class="mb-2"><a href="#"><i class="bi bi-mastodon" aria-hidden="true"></i> Mastodon</a></li>
+            <li class="mb-2"><a href="#"><i class="bi bi-bluesky" aria-hidden="true"></i> Bluesky</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <h3 class="h6 nn-mono nn-acento mb-3">Newsletter</h3>
+          <form class="nn-form-footer needs-validation" novalidate>
+            <label for="correo-footer" class="form-label small">Recibe los eventos del mes</label>
+            <div class="input-group">
+              <input id="correo-footer" type="email" class="form-control" placeholder="tu@correo.com" required>
+              <button class="btn btn-nn" type="submit">Apuntarme</button>
+              <div class="invalid-feedback">Introduce un correo válido.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4" style="border-color: rgba(139, 92, 246, .35);">
+      <p class="small mb-0 nn-mono nn-texto-suave">© Nodo Norte · Contacto por correo electrónico</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
