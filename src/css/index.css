@@ -1,0 +1,107 @@
+/* Variables de las Tipografías y Colores */
+    :root {    
+        --font-titulos: "Audiowide", sans-serif;
+        --font-texto: "Inter", system-ui, sans-serif;
+        --font-mono: "IBM Plex Mono", monospace;
+        --font-pixel: "Silkscreen", monospace;
+
+        --azul-noche: #101522;
+        --violeta: #8B5CF6;
+        --cian: #35F2FF;
+        --magenta: #FF3CAC;
+        --blanco-frio: #F4F7FF;
+        --ciruela: #25213B;
+    }
+
+/* Estilos generales del body */
+    body {
+        font-family: var(--font-texto);
+        color: var(--blanco-frio);
+        background-color: var(--azul-noche);
+    }
+
+/* Estilos generales para textos y párrafos */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-titulos);
+        color: var(--blanco-frio);
+    }
+
+/* Estilos para la barra de navegación */
+    nav {
+        background-color: var(--ciruela);
+        color: var(--blanco-frio);
+    }
+
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: var(--blanco-frio);
+    }
+
+    .navbar .nav-link {
+        background-image: linear-gradient(var(--cian), var(--cian));
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: 0 2px;
+        transition: color 180ms ease, background-size 180ms ease;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus-visible {
+        color: var(--cian);
+        background-size: 100% 2px;
+    }
+
+    .navbar .navbar-nav .nav-link.show {
+        color: var(--cian);
+        background-size: 100% 2px;
+    }
+
+    .navbar .nav-link.active {
+        color: var(--cian);
+    }
+
+    .navbar .dropdown-menu {
+        background-color: var(--ciruela);
+    }
+
+    .navbar .dropdown-item {
+        color: var(--blanco-frio);
+    }
+
+    .navbar .dropdown-item:hover,
+    .navbar .dropdown-item:focus,
+    .navbar .dropdown-item:active {
+        color: var(--cian);
+        background-color: var(--ciruela);
+    }
+
+/* Estilos para los botones */
+    .btn-primary {
+        background-color: var(--cian);
+        border-color: var(--cian);
+        color: var(--ciruela);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: var(--magenta);
+        border-color: var(--magenta);
+        color: var(--blanco-frio);
+    }
+
+/* Estilos para el footer */
+    footer {
+        background-color: var(--ciruela);
+        color: var(--blanco-frio);
+    }
+
+    footer a {
+        color: var(--blanco-frio);
+        text-decoration: none;
+    }
+
+    footer a:hover,
+    footer a:focus {
+        color: var(--cian);
+        text-decoration: underline;
+    }

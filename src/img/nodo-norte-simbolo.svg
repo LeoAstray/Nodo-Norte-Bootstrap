@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Nodo Norte</title>
+<desc id="desc">Símbolo N de cinta redondeada con punto cian, reconstruido en vectores a partir del favicon original; en degradado violeta, magenta y cian. Fondo transparente.</desc>
+<defs>
+ <linearGradient id="left" x1="270" y1="430" x2="416" y2="920" gradientUnits="userSpaceOnUse"><stop stop-color="#8B20FF"/><stop offset=".48" stop-color="#AE21F4"/><stop offset="1" stop-color="#FF35F4"/></linearGradient>
+ <linearGradient id="fold" x1="423" y1="460" x2="790" y2="938" gradientUnits="userSpaceOnUse"><stop stop-color="#1710C9"/><stop offset=".5" stop-color="#4614F5"/><stop offset="1" stop-color="#D32BF8"/></linearGradient>
+ <linearGradient id="right" x1="884" y1="445" x2="912" y2="945" gradientUnits="userSpaceOnUse"><stop stop-color="#00F1EE"/><stop offset=".38" stop-color="#00BFF4"/><stop offset=".74" stop-color="#6250FF"/><stop offset="1" stop-color="#AB35F2"/></linearGradient>
+ <linearGradient id="ribbon" x1="329" y1="343" x2="865" y2="887" gradientUnits="userSpaceOnUse"><stop stop-color="#F258F8"/><stop offset=".25" stop-color="#AF72FA"/><stop offset=".55" stop-color="#414FFF"/><stop offset=".83" stop-color="#003DF0"/><stop offset="1" stop-color="#1723D0"/></linearGradient>
+ <linearGradient id="front" x1="367" y1="344" x2="783" y2="977" gradientUnits="userSpaceOnUse"><stop stop-color="#EF56F5"/><stop offset=".28" stop-color="#B037F6"/><stop offset=".60" stop-color="#6B2AF6"/><stop offset=".83" stop-color="#A52AF8"/><stop offset="1" stop-color="#ED30F1"/></linearGradient>
+ <linearGradient id="dot" x1="859" y1="278" x2="953" y2="423" gradientUnits="userSpaceOnUse"><stop stop-color="#00FFF0"/><stop offset="1" stop-color="#00BDEB"/></linearGradient>
+</defs>
+<g id="simbolo-n-original" transform="translate(-19 -22) scale(.24)">
+ <path id="base-continua" fill="url(#front)" d="M247 496C247 402 317 321 402 321C471 321 528 371 573 427L807 690V530C807 472 846 437 900 437C951 437 988 474 988 528V829C988 924 919 987 828 987C758 987 705 967 659 914L421 630V850C421 905 385 949 335 949C285 949 247 906 247 852Z"/>
+ <path id="pliegue-interior" fill="url(#fold)" d="M421 480L855 777V893L828 982C764 999 705 967 659 914L421 630Z"/>
+ <path id="brazo-derecho" fill="url(#right)" d="M807 690V530C807 472 846 437 900 437C951 437 988 474 988 528V829C988 862 981 892 965 914C933 939 886 922 855 884L807 819Z"/>
+ <path id="brazo-izquierdo" fill="url(#left)" d="M247 496C247 442 275 414 318 414C364 410 398 438 435 485C425 497 421 512 421 532V850C421 905 385 949 335 949C285 949 247 906 247 852Z"/>
+ <path id="cinta-superior" fill="url(#ribbon)" d="M247 496C247 402 317 321 402 321C471 321 528 371 573 427L855 740V772C855 811 836 832 807 828C779 826 754 799 727 767L435 485C393 437 361 414 318 414C275 414 247 442 247 496Z"/>
+ <path id="cinta-frontal" fill="url(#front)" d="M247 496C247 402 317 321 402 321C447 321 477 349 502 393C561 500 608 607 670 695C741 796 822 885 884 913C915 927 942 927 965 914C937 959 885 987 828 987C758 987 705 967 659 914L435 485C393 437 361 414 318 414C275 414 247 442 247 496Z"/>
+ <circle id="point-cyan" fill="url(#dot)" cx="902.5" cy="345" r="85"/>
+</g>
+
+</svg>

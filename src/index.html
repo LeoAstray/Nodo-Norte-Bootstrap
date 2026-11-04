@@ -2,14 +2,91 @@
 
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Nodo Norte</title>
+    <link rel="icon" type="icon/png" href="./img/Favicon_Nodo-Norte.png">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple webpage using Bootstrap 6.</p>
-    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Nodo Norte</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Únete</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Eventos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Recientes</a></li>
+                            <li><a class="dropdown-item" href="#">Próximos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Pasados</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn-primary" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="nn-logo-footer mb-0"><img src="./img/nodo-norte-horizontal-fondos-oscuros.svg" alt="Nodo Norte. Comunidad tecnológica A Coruña" class="img-fluid"></div>
+                </div>
+                <div class="col-3">
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-2">
+                            <img src="./img/logo-instagram.svg" alt="Logo de instagram">
+                            <a href="#">
+                                <i class="bi bi-instagram" aria-hidden="true"></i> 
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <img src="./img/logo-mastodon.svg" alt="Logo de Mastodon">
+                            <a href="#">
+                                <i class="bi bi-mastodon" aria-hidden="true"></i> 
+                                Mastodon
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <img src="./img/logo-bluesky.svg" alt="Logo de bluesky">
+                            <a href="#">
+                                <i class="bi bi-bluesky" aria-hidden="true"></i> 
+                                Bluesky
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h3 class="h6 nn-mono nn-acento mb-3">Newsletter</h3>
+                    <form class="nn-form-footer needs-validation" novalidate>
+                        <div class="input-group">
+                        <input id="correo-footer" type="email" class="form-control" placeholder="tu@correo.com" required>
+                        <button class="btn-primary" type="submit">Apuntarme</button>
+                        <div class="invalid-feedback">Introduce un correo válido.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <p class="small mb-0 nn-mono nn-texto-suave">© Nodo Norte · Contacto por correo electrónico</p>
+        </div>
+    </footer>
 </body>
 
 </html>
