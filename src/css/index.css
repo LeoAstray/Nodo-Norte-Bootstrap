@@ -1,0 +1,34 @@
+hero .btn-primary-eventos {
+    background-color: var(--cian);
+    border-color: var(--azul-noche);
+    color: var(--ciruela);
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    text-decoration: none;
+    font-family: var(--font-titulos);
+}
+
+hero .btn-primary-eventos:hover,
+.btn-primary-eventos:focus {
+    background-color: var(--magenta);
+    border-color: var(--magenta);
+    color: var(--blanco-frio);
+}
+
+hero .btn-primary-socios {
+    background-color: var(--violeta);
+    border-color: var(--violeta);
+    color: var(--ciruela);
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    text-decoration: none;
+    font-family: var(--font-titulos);
+}
+
+hero .btn-primary-socios:hover,
+.btn-primary-socios:focus {
+    background-color: var(--magenta);
+    border-color: var(--magenta);
+    color: var(--blanco-frio);
+}
+
