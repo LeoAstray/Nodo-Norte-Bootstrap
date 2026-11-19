@@ -1,3 +1,5 @@
+/* Estilos para el hero */
+
 hero .btn-primary-eventos {
     background-color: var(--cian);
     border-color: var(--azul-noche);
@@ -31,4 +33,3 @@ hero .btn-primary-socios:hover,
     border-color: var(--magenta);
     color: var(--blanco-frio);
 }
-
