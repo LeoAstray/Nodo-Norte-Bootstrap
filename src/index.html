@@ -93,7 +93,7 @@
                                 <li><strong>Ponente:</strong> <button type="button" class="nn-ponente-btn" data-bs-toggle="modal" data-bs-target="#ponente-lucia">Lucía Varela</button></li>
                                 <li><strong>Plazas:</strong> 30</li>
                             </ul>
-                            <button type="button" class="btn nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion" data-evento="Introducción a Bootstrap">Asistir</button>
+                            <button type="button" class="btn nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion">Asistir</button>
                         </div>
                     </article>
                 </div>
@@ -164,7 +164,7 @@
                                 <li><strong>Ponente:</strong> <button type="button" class="nn-ponente-btn" data-bs-toggle="modal" data-bs-target="#ponente-lucia">Lucía Varela</button></li>
                                 <li><strong>Plazas:</strong> 30</li>
                             </ul>
-                            <button type="button" class="btn nn-event-btn align-self-start mt-auto" data-bs-toggle="modal" data-bs-target="#inscripcion" data-evento="Introducción a Bootstrap">Asistir</button>
+                            <button type="button" class="btn nn-event-btn align-self-start mt-auto" data-bs-toggle="modal" data-bs-target="#inscripcion">Asistir</button>
                         </div></article>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
@@ -178,7 +178,7 @@
                                 <li><strong>Ponente:</strong> <button type="button" class="nn-ponente-btn" data-bs-toggle="modal" data-bs-target="#ponente-iago">Iago Pardo</button></li>
                                 <li><strong>Plazas:</strong> 25</li>
                             </ul>
-                            <button type="button" class="btn nn-event-btn align-self-start mt-auto" data-bs-toggle="modal" data-bs-target="#inscripcion" data-evento="Interfaces web accesibles">Asistir</button>
+                            <button type="button" class="btn nn-event-btn align-self-start mt-auto" data-bs-toggle="modal" data-bs-target="#inscripcion">Asistir</button>
                         </div></article>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
@@ -203,8 +203,8 @@
                             <caption>Fechas de ejemplo de los próximos eventos</caption>
                             <thead><tr><th scope="col">Fecha</th><th scope="col">Evento</th><th scope="col">Nivel</th><th scope="col">Plazas</th><th scope="col">Inscripción</th></tr></thead>
                             <tbody>
-                                <tr><td>01.12.2026</td><td>Introducción a Bootstrap</td><td><span class="nn-nivel nn-nivel-inicial">Inicial</span></td><td>30</td><td><button type="button" class="btn btn-sm nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion" data-evento="Introducción a Bootstrap">Asistir</button></td></tr>
-                                <tr><td>05.01.2027</td><td>Interfaces web accesibles</td><td><span class="nn-nivel nn-nivel-medio">Medio</span></td><td>25</td><td><button type="button" class="btn btn-sm nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion" data-evento="Interfaces web accesibles">Asistir</button></td></tr>
+                                <tr><td>01.12.2026</td><td>Introducción a Bootstrap</td><td><span class="nn-nivel nn-nivel-inicial">Inicial</span></td><td>30</td><td><button type="button" class="btn btn-sm nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion">Asistir</button></td></tr>
+                                <tr><td>05.01.2027</td><td>Interfaces web accesibles</td><td><span class="nn-nivel nn-nivel-medio">Medio</span></td><td>25</td><td><button type="button" class="btn btn-sm nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion">Asistir</button></td></tr>
                                 <tr><td>02.02.2027</td><td>Seguridad en aplicaciones web</td><td><span class="nn-nivel nn-nivel-avanzado">Avanzado</span></td><td>Aforo completo</td><td><button type="button" class="btn btn-sm nn-event-btn-completo" disabled>Aforo completo</button></td></tr>
                             </tbody>
                         </table>
@@ -267,7 +267,7 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="needs-validation" data-exito="#inscripcion-exito" novalidate>
+                        <form class="needs-validation" novalidate>
                             <div class="mb-3">
                                 <label for="inscripcion-evento" class="form-label">Evento</label>
                                 <select id="inscripcion-evento" class="form-select" required>
@@ -299,9 +299,6 @@
                             <button type="submit" class="btn nn-event-btn">Reservar plaza</button>
                             <button type="button" class="btn nn-modal-cerrar" data-bs-dismiss="modal">Cancelar</button>
                         </form>
-                        <div id="inscripcion-exito" class="alert nn-alerta-exito mb-0" role="status" tabindex="-1" hidden>
-                            <strong>¡Listo!</strong> Hemos recibido tu inscripción. Te escribiremos al correo con los detalles.
-                        </div>
                     </div>
                 </div>
             </div>
@@ -324,7 +321,7 @@
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion" data-evento="Introducción a Bootstrap">Asistir</button>
+                        <button type="button" class="btn nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion">Asistir</button>
                         <button type="button" class="btn nn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
@@ -348,7 +345,7 @@
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion" data-evento="Interfaces web accesibles">Asistir</button>
+                        <button type="button" class="btn nn-event-btn" data-bs-toggle="modal" data-bs-target="#inscripcion">Asistir</button>
                         <button type="button" class="btn nn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>

@@ -296,16 +296,3 @@ hr.nn-separador {
         padding: 2rem 3rem 2.5rem;
     }
 }
-
-/* Mensaje de confirmacion de la inscripcion (modal de inscripcion) */
-.nn-alerta-exito {
-    background: rgba(53, 242, 255, 0.12);
-    border: 1px solid var(--cian);
-    color: var(--blanco-frio);
-}
-
-/* El atributo hidden debe ganar a display de Bootstrap */
-.nn-alerta-exito[hidden],
-.nn-modal form[hidden] {
-    display: none;
-}

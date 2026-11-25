@@ -140,7 +140,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <p class="mb-0 nn-event-detalles"><strong>Métodos de pago:</strong> [por completar]</p>
+                                    <p class="mb-0 nn-event-detalles"><strong>Métodos de pago (aportación voluntaria):</strong> transferencia o PayPal.</p>
                                 </div>
                             </article>
                         </div>
@@ -237,28 +237,52 @@
                     <article class="card nn-event-card">
                         <div class="card-body p-4">
                             <h2 class="h4">Propón una charla</h2>
-                            <p>[Boceto: campos por definir]</p>
+                            <p>Cuéntanos qué te gustaría compartir con la comunidad.</p>
                             <form class="needs-validation" novalidate>
                                 <div class="row g-3">
                                     <div class="col-12 col-md-6">
                                         <label for="charla-nombre" class="form-label">Nombre</label>
-                                        <input id="charla-nombre" type="text" class="form-control" required>
+                                        <input id="charla-nombre" type="text" class="form-control" autocomplete="name" required>
                                         <div class="invalid-feedback">Escribe tu nombre.</div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <label for="charla-correo" class="form-label">Correo electrónico</label>
-                                        <input id="charla-correo" type="email" class="form-control" required>
+                                        <input id="charla-correo" type="email" class="form-control" autocomplete="email" required>
                                         <div class="invalid-feedback">Introduce un correo válido.</div>
                                     </div>
                                     <div class="col-12">
-                                        <label for="charla-titulo" class="form-label">Título de la charla</label>
-                                        <input id="charla-titulo" type="text" class="form-control" required>
-                                        <div class="invalid-feedback">Escribe un título.</div>
+                                        <label for="charla-tema" class="form-label">Tema</label>
+                                        <input id="charla-tema" type="text" class="form-control" required>
+                                        <div class="invalid-feedback">Escribe el tema de la charla.</div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="charla-tipo" class="form-label">Tipo</label>
+                                        <select id="charla-tipo" class="form-select" required>
+                                            <option value="" selected disabled>Elige una opción</option>
+                                            <option>Charla</option>
+                                            <option>Taller</option>
+                                            <option>Hackatón</option>
+                                        </select>
+                                        <div class="invalid-feedback">Elige un tipo.</div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="charla-nivel" class="form-label">Nivel</label>
+                                        <select id="charla-nivel" class="form-select" required>
+                                            <option value="" selected disabled>Elige una opción</option>
+                                            <option>Inicial</option>
+                                            <option>Medio</option>
+                                            <option>Avanzado</option>
+                                        </select>
+                                        <div class="invalid-feedback">Elige un nivel.</div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="charla-duracion" class="form-label">Duración (minutos)</label>
+                                        <input id="charla-duracion" type="number" class="form-control" min="15" max="240" step="15" required>
+                                        <div class="invalid-feedback">Indica una duración entre 15 y 240 minutos.</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="charla-descripcion" class="form-label">Descripción</label>
-                                        <textarea id="charla-descripcion" class="form-control" rows="4"
-                                            required></textarea>
+                                        <textarea id="charla-descripcion" class="form-control" rows="4" required></textarea>
                                         <div class="invalid-feedback">Cuéntanos de qué trata.</div>
                                     </div>
                                     <div class="col-12">
