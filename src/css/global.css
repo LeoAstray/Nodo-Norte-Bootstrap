@@ -11,6 +11,7 @@
     --magenta: #FF3CAC;
     --blanco-frio: #F4F7FF;
     --ciruela: #25213B;
+    --borde-violeta: #8b5cf673;
  
     --fs-logo-footer: 1.6rem;
     --fs-titulo: 2.5rem;
@@ -48,11 +49,12 @@ main {
     border-color: var(--cian);
     color: var(--ciruela);
     border-radius: 0.5rem;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
     background-color: var(--magenta);
     border-color: var(--magenta);
-    color: var(--blanco-frio);
+    color: var(--azul-noche);
 }

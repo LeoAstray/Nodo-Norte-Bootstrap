@@ -1,102 +1,298 @@
 /* Estilos para el hero */
 
-hero .btn-primary-eventos {
+.nn-hero-banda {
+    margin: -2rem -2rem 0;
+    padding: 4rem 0;
+    background-image:
+        linear-gradient(90deg, rgba(16, 21, 34, 0.94) 0%, rgba(16, 21, 34, 0.82) 55%, rgba(16, 21, 34, 0.6) 100%),
+        url("../img/hero/hero-orzan.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+hr.nn-separador {
+    height: 2px;
+    border: 0;
+    opacity: 1;
+    margin: 2rem -2rem;
+    background: linear-gradient(90deg, var(--violeta), var(--cian), var(--magenta));
+}
+
+.nn-hero-texto {
+    text-align: center;
+}
+
+.nn-hero-texto h1 {
+    font-size: clamp(3rem, 7vw, 4.75rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.nn-hero-etiqueta {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+}
+
+.nn-hero-subtitulo {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    margin-bottom: 2rem;
+}
+
+.nn-hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nn-hero-banda .nn-hero-botones a {
+    font-size: 1.15rem;
+    padding: 0.85rem 1.75rem;
+}
+
+.nn-hero-banda .btn-primary-eventos,
+.nn-hero-banda .btn-primary-socios {
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: var(--font-titulos);
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.nn-hero-banda .btn-primary-eventos {
     background-color: var(--cian);
     border-color: var(--azul-noche);
     color: var(--ciruela);
-    border-radius: 0.5rem;
-    padding: 0.625rem;
-    text-decoration: none;
-    font-family: var(--font-titulos);
 }
 
-hero .btn-primary-eventos:hover,
-.btn-primary-eventos:focus {
-    background-color: var(--magenta);
-    border-color: var(--magenta);
-    color: var(--blanco-frio);
-}
-
-hero .btn-primary-socios {
+.nn-hero-banda .btn-primary-socios {
     background-color: var(--violeta);
     border-color: var(--violeta);
     color: var(--ciruela);
-    border-radius: 0.5rem;
-    padding: 0.625rem;
-    text-decoration: none;
-    font-family: var(--font-titulos);
 }
 
-hero .btn-primary-socios:hover,
-.btn-primary-socios:focus {
+.nn-hero-banda .btn-primary-eventos:hover,
+.nn-hero-banda .btn-primary-eventos:focus,
+.nn-hero-banda .btn-primary-socios:hover,
+.nn-hero-banda .btn-primary-socios:focus {
     background-color: var(--magenta);
     border-color: var(--magenta);
+    color: var(--azul-noche);
+}
+
+/* Estilos para eventos */
+
+.nn-eventos,
+.nn-eventos section {
+    scroll-margin-top: 2rem;
+}
+
+.nn-event-label, .nn-event-fecha, .nn-ponente-cargo {
+    color: var(--cian); font-family: var(--font-mono); font-size: .9rem;
+}
+
+.nn-event-card {
+    background: linear-gradient(135deg, var(--ciruela), var(--cian) 400%); color: var(--blanco-frio); border: 1px solid var(--borde-violeta); border-radius: 1rem;
+}
+
+.nn-event-detalles {
+    color: #e4e5f0; line-height: 1.8;
+}
+
+.nn-event-btn {
+    background: var(--cian); color: var(--azul-noche); font-weight: 600;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.nn-event-btn:hover, .nn-event-btn:focus-visible {
+    background: var(--magenta); color: var(--azul-noche);
+}
+
+.nn-event-btn-completo, .nn-event-btn-completo:disabled {
+    color: var(--blanco-frio); background: transparent; border: 1px dashed var(--blanco-frio); opacity: .8;
+}
+
+.nn-event-table-wrap {
+    border: 1px solid var(--borde-violeta); border-radius: .75rem;
+}
+
+.nn-event-table-wrap caption {
+    color: #c9cedd; padding-inline: .75rem;
+}
+
+.nn-nivel {
+    display: inline-block; padding: .2rem .55rem; border-radius: .35rem; font-family: var(--font-pixel); font-size: .7rem; line-height: 1.4;
+}
+
+.nn-nivel-inicial {
+    background: var(--cian); color: var(--azul-noche);
+}
+
+.nn-nivel-medio {
+    background: var(--blanco-frio); color: var(--azul-noche);
+}
+
+.nn-nivel-avanzado {
+    background: var(--magenta); color: var(--azul-noche);
+}
+
+.nn-carrusel {
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+    border: 1px solid var(--borde-violeta);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.nn-carrusel .carousel-item img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.nn-carrusel .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3rem 3.5rem 2.75rem;
+    text-align: left;
+    background: linear-gradient(180deg, rgba(16, 21, 34, 0) 0%, rgba(16, 21, 34, 0.92) 55%);
+}
+
+/* Estilos para sobre nosotros */
+
+.nn-sobre-nosotros {
+    background-color: var(--ciruela);
+    margin-inline: -2rem;
+}
+
+.grid-sobre-nosotros img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.nn-valores {
+    margin-top: 1.5rem;
+}
+
+.nn-valores li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.nn-valores .bi {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    color: var(--cian);
+}
+
+.nn-creditos-imagenes {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 1.5rem;
+}
+
+.nn-creditos-imagenes a {
+    color: var(--cian);
+}
+
+.nn-creditos-imagenes p {
+    margin-bottom: 0.5rem;
+}
+
+.nn-ponente-btn {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--cian);
+    font: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    transition: color 0.25s ease;
+}
+
+.nn-ponente-btn:hover,
+.nn-ponente-btn:focus-visible {
+    color: var(--magenta);
+}
+
+.nn-modal .modal-content {
+    background: var(--ciruela);
     color: var(--blanco-frio);
+    border: 1px solid var(--borde-violeta);
+    border-radius: 1rem;
 }
 
-.nn-eventos { 
-    scroll-margin-top: 2rem; 
-}
-.nn-eventos section { 
-    scroll-margin-top: 2rem; 
+.nn-modal .modal-header,
+.nn-modal .modal-footer {
+    border-color: rgba(244, 247, 255, 0.15);
 }
 
-.nn-event-label, .nn-event-fecha { 
-    color: var(--cian); font-family: var(--font-mono); font-size: .9rem; 
+.nn-modal-cerrar {
+    color: var(--blanco-frio);
+    border: 1px solid rgba(244, 247, 255, 0.4);
 }
 
-.nn-event-card { 
-    background: var(--ciruela); color: var(--blanco-frio); border: 1px solid rgba(139, 92, 246, .45); border-radius: 1rem; 
-}
-.nn-event-destacado { 
-    width: 100%; 
-}
-
-.nn-event-detalles { 
-    color: #e4e5f0; line-height: 1.8; 
+.nn-modal-cerrar:hover,
+.nn-modal-cerrar:focus-visible {
+    color: var(--blanco-frio);
+    border-color: var(--blanco-frio);
 }
 
-.nn-event-btn { 
-    background: var(--cian); color: var(--azul-noche); font-weight: 600; 
-}
+@media (max-width: 768px) {
+    .nn-hero-banda {
+        padding: 2.5rem 0;
+        background-image:
+            linear-gradient(180deg, rgba(16, 21, 34, 0.9) 0%, rgba(16, 21, 34, 0.8) 100%),
+            url("../img/hero/hero-orzan.jpg");
+    }
 
-.nn-event-btn:hover, .nn-event-btn:focus-visible { 
-    background: var(--magenta); color: var(--azul-noche); 
-}
+    .nn-hero-texto {
+        margin-bottom: 2rem;
+    }
 
-.nn-event-tag { 
-    display: inline-block; padding: .3rem .6rem; border: 1px solid var(--violeta); border-radius: .4rem; font-family: var(--font-mono); font-size: .8rem; 
-}
+    .nn-hero-texto h1,
+    .nn-hero-subtitulo {
+        text-wrap: balance;
+    }
 
-.nn-event-table-wrap { 
-    border: 1px solid rgba(139, 92, 246, .45); border-radius: .75rem; 
-}
+    .nn-hero-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-.nn-event-table-wrap caption { 
-    color: #c9cedd; padding-inline: .75rem; 
-}
+    .nn-hero-banda .nn-hero-botones a {
+        display: block;
+        text-align: center;
+    }
 
-.nn-event-foto { 
-    min-height: 9rem; display: grid; place-items: center; padding: 1rem; color: var(--blanco-frio); background: linear-gradient(135deg, #503681, #792b74); border-radius: .75rem; font-family: var(--font-mono); font-size: .85rem; 
-}
+    .nn-event-btn,
+    .nn-event-btn-completo,
+    .navbar .navbar-toggler,
+    .nn-ponente-btn,
+    .nn-modal .btn,
+    footer .nn-footer-social a {
+        min-height: 44px;
+    }
 
+    .nn-event-btn,
+    .nn-event-btn-completo,
+    .nn-ponente-btn {
+        display: inline-flex;
+        align-items: center;
+    }
 
-.nn-nivel { 
-    display: inline-block; padding: .2rem .55rem; border-radius: .35rem; font-family: var(--font-pixel); font-size: .7rem; line-height: 1.4; 
-}
+    .nn-event-btn,
+    .nn-event-btn-completo {
+        justify-content: center;
+    }
 
-.nn-nivel-inicial { 
-    background: var(--cian); color: var(--azul-noche); 
-}
+    .navbar .navbar-toggler {
+        min-width: 44px;
+    }
 
-.nn-nivel-medio { 
-    background: var(--blanco-frio); color: var(--azul-noche); 
-}
-
-.nn-nivel-avanzado { 
-    background: var(--magenta); color: var(--azul-noche); 
-}
-
-.nn-event-btn-completo, .nn-event-btn-completo:disabled { 
-    color: var(--blanco-frio); background: transparent; border: 1px dashed var(--blanco-frio); opacity: .8; 
+    .nn-carrusel .carousel-caption {
+        padding: 2rem 3rem 2.5rem;
+    }
 }

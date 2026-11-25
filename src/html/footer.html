@@ -24,12 +24,12 @@
 </head>
 
 <body>
-    <footer>
+        <footer>
         <div class="container-fluid px-4 px-lg-5">
             <div class="row gy-4 align-items-center justify-content-md-between">
                 <div class="col-12 col-md-auto nn-footer-logo">
                     <span class="nn-logo" role="img" aria-label="Nodo Norte. Comunidad tecnológica A Coruña"><img
-                            src="../img/nodo-norte-n.svg" alt=""><span class="nn-logo-texto" aria-hidden="true">Nodo
+                            src="./img/nodo-norte-n.svg" alt=""><span class="nn-logo-texto" aria-hidden="true">Nodo
                             Norte</span></span>
                 </div>
                 <div class="col-12 col-md-auto nn-footer-social">
@@ -37,19 +37,19 @@
                     <ul class="list-unstyled mb-0">
                         <li>
                             <a href="https://www.instagram.com/" target="_blank">
-                                <img src="../img/logo-instagram.svg" alt="">
+                                <img src="./img/logo-instagram.svg" alt="">
                                 Instagram
                             </a>
                         </li>
                         <li>
                             <a href="https://mastodon.social/explore" target="_blank">
-                                <img src="../img/logo-mastodon.svg" alt="">
+                                <img src="./img/logo-mastodon.svg" alt="">
                                 Mastodon
                             </a>
                         </li>
                         <li>
                             <a href="https://bsky.app/" target="_blank">
-                                <img src="../img/logo-bluesky.svg" alt="">
+                                <img src="./img/logo-bluesky.svg" alt="">
                                 Bluesky
                             </a>
                         </li>
@@ -58,12 +58,13 @@
                 <div class="col-12 col-md-auto nn-footer-newsletter">
                     <h3 class="h6 mb-3">Newsletter</h3>
                     <form class="needs-validation" novalidate>
+                        <label for="correo-footer" class="visually-hidden">Tu correo electrónico</label>
                         <div class="input-group">
                             <input id="correo-footer" type="email" class="form-control" placeholder="tu@correo"
-                                required>
+                                required aria-describedby="correo-footer-error">
                             <button class="btn-primary" type="submit">Apuntarme</button>
                         </div>
-                        <div class="invalid-feedback">Introduce un correo válido.</div>
+                        <div id="correo-footer-error" class="invalid-feedback">Introduce un correo válido.</div>
                     </form>
                 </div>
             </div>
@@ -72,7 +73,7 @@
             </p>
         </div>
     </footer>
-    <script src="../js/validacion-newsletter-footer.js"></script>
+    <script src="./js/validacion-newsletter-footer.js"></script>
 </body>
 
 </html>

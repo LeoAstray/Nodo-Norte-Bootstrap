@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons: iconos de los valores de la comunidad. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
@@ -14,14 +16,10 @@
     <link rel="icon" type="icon/png" href="./img/Favicon_Nodo-Norte.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +31,7 @@
                             alt=""><span class="nn-logo-texto" aria-hidden="true">Nodo Norte</span></span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Mostrar u ocultar el menú de navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,32 +46,39 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">Eventos</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Recientes</a></li>
-                                <li><a class="dropdown-item" href="#">Próximos</a></li>
+                                <li><a class="dropdown-item" href="#eventos-pasados">Recientes</a></li>
+                                <li><a class="dropdown-item" href="#eventos-futuros">Próximos</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Pasados</a></li>
+                                <li><a class="dropdown-item" href="#eventos-pasados">Pasados</a></li>
                             </ul>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder=". . ." aria-label="Search" />
+                        <label for="busqueda" class="visually-hidden">Buscar en el sitio</label>
+                        <input id="busqueda" class="form-control me-2" type="search" placeholder=". . ." />
                         <button class="btn-primary" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
+    
     <main>
-        <hero class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <p class="">Charlas • Talleres • Hackatones</p>
-                    <h1 class="">Nodo Norte</h1>
-                    <p class="">Comunidad tecnológica de A Coruña</p>
-                    <a href="#eventos" class="btn-primary-eventos">Ver próximos eventos</a>
-                    <a href="#" class="btn-primary-socios" tabindex="-1" role="button" aria-disabled="true">Hazte Socio</a>
+
+        <!-- Seccion del Hero. -->
+        <section class="nn-hero-banda">
+            <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 nn-hero-texto">
+                    <p class="nn-hero-etiqueta">Charlas • Talleres • Hackatones</p>
+                    <h1>Nodo Norte</h1>
+                    <p class="nn-hero-subtitulo">Comunidad tecnológica de A Coruña</p>
+                    <div class="nn-hero-botones">
+                        <a href="#eventos" class="btn-primary-eventos">Ver próximos eventos</a>
+                        <a href="#" class="btn-primary-socios" tabindex="-1" role="button" aria-disabled="true">Hazte Socio</a>
+                    </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <article class="card nn-event-card nn-event-destacado h-100">
@@ -84,24 +89,69 @@
                             <p>Una primera toma de contacto con Bootstrap y sus componentes.</p>
                             <ul class="list-unstyled nn-event-detalles">
                                 <li><strong>Nivel:</strong> <span class="nn-nivel nn-nivel-inicial">Inicial</span></li>
-                                <li><strong>Lugar:</strong> A Coruña, por confirmar</li>
-                                <li><strong>Ponente:</strong> por confirmar</li>
-                                <li><strong>Plazas:</strong> por confirmar</li>
+                                <li><strong>Lugar:</strong> WeKCo, Mesoiro (A Coruña)</li>
+                                <li><strong>Ponente:</strong> <button type="button" class="nn-ponente-btn" data-bs-toggle="modal" data-bs-target="#ponente-lucia">Lucía Varela</button></li>
+                                <li><strong>Plazas:</strong> 30</li>
                             </ul>
                             <a href="./html/unete.html" class="btn nn-event-btn">Asistir</a>
                         </div>
                     </article>
                 </div>
             </div>
-        </hero>
+            </div>
+        </section>
 
-        <!-- 1B: espacio reservado para la futura sección Sobre nosotros. -->
-        <!-- 1C: eventos. Los datos indicados son ejemplos de diseño. -->
+        <hr class="nn-separador">
+
+        <!-- Seccion de Sobre Nosotros. -->
+        <section id="sobre-nosotros" class="nn-eventos nn-sobre-nosotros py-5" aria-labelledby="sobre-nosotros-titulo">
+            <div class="container">
+            <div class="row align-items-center gy-4 gx-lg-5">
+                <div class="col-12 col-lg-5">
+                    <div class="row row-cols-2 g-3 grid-sobre-nosotros">
+                        <div class="col"><div class="ratio ratio-1x1"><img src="./img/sobre-nosotros/sobre-charla.jpg" alt="Ponente dando una charla ante un auditorio lleno" width="800" height="800" loading="lazy"></div></div>
+                        <div class="col"><div class="ratio ratio-1x1"><img src="./img/sobre-nosotros/sobre-torre-hercules.jpg" alt="Torre de Hércules, el faro romano de A Coruña, bajo un cielo azul" width="800" height="800" loading="lazy"></div></div>
+                        <div class="col"><div class="ratio ratio-1x1"><img src="./img/sobre-nosotros/sobre-playa-orzan.jpg" alt="Playa del Orzán en A Coruña con los edificios del paseo al fondo" width="800" height="800" loading="lazy"></div></div>
+                        <div class="col"><div class="ratio ratio-1x1"><img src="./img/sobre-nosotros/sobre-hackaton.jpg" alt="Participante trabajando con su portátil durante un hackatón" width="800" height="800" loading="lazy"></div></div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <h2 id="sobre-nosotros-titulo">Sobre nosotros</h2>
+                    <p>Nodo Norte es una comunidad tecnológica de A Coruña abierta a cualquier persona con curiosidad por la tecnología, tanto si está empezando como si ya tiene experiencia.</p>
+                    <p>Organizamos charlas, talleres y hackatones para aprender juntas y juntos, compartir conocimiento y conocer a otras personas del sector. Nuestros eventos tienen distintos niveles, de inicial a avanzado, para que todo el mundo encuentre su sitio.</p>
+                    <p>Nos reunimos el primer martes de cada mes y, después de las charlas, dejamos un rato de networking para seguir conversando.</p>
+                    <ul class="list-unstyled row row-cols-2 g-3 nn-valores">
+                        <li class="col"><i class="bi bi-heart" aria-hidden="true"></i> Cercanía</li>
+                        <li class="col"><i class="bi bi-people" aria-hidden="true"></i> Comunidad</li>
+                        <li class="col"><i class="bi bi-lightbulb" aria-hidden="true"></i> Aprendizaje compartido</li>
+                        <li class="col"><i class="bi bi-code-slash" aria-hidden="true"></i> Software libre</li>
+                    </ul>
+                    <div class="nn-creditos-imagenes">
+                    <p>
+                        Fotos:
+                        <a href="https://commons.wikimedia.org/wiki/File:A_coruna_torre_de_hercules_sunset_edit.jpg" target="_blank" rel="noopener">Torre de Hércules</a>
+                        por Alessio Damato (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>) ·
+                        <a href="https://commons.wikimedia.org/wiki/File:Wikimania_2014_-_Day_1_-_Hackathon_participants_05.JPG" target="_blank" rel="noopener">Hackatón</a>
+                        por Gaelle Berton (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>) ·
+                        <a href="https://wordpress.org/photos/photo/253678bbbc/" target="_blank" rel="noopener">Playa del Orzán</a>
+                        por luis1gonzalez (CC0) ·
+                        <a href="https://www.pexels.com/photo/1709003" target="_blank" rel="noopener">Charla</a> en Pexels.
+                    </p>
+                    <p>Recortadas a formato cuadrado • Las fotos son propiedad de sus autores y se utilizan bajo licencia Creative Commons o dominio público.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <hr class="nn-separador">
+
+        <!-- Seccion de Eventos. -->
         <section id="eventos" class="container-fluid nn-eventos py-5" aria-labelledby="eventos-titulo">
-
+            <h2 id="eventos-titulo" class="visually-hidden">Eventos</h2>
             <section id="eventos-futuros" class="mb-5" aria-labelledby="futuros-titulo">
                 <p class="nn-event-label mb-1">La comunidad se encuentra aquí</p>
-                <h3 id="futuros-titulo" class="mb-4">Proximamente</h3>
+                <h3 id="futuros-titulo" class="mb-4">Próximamente</h3>
                 <div class="row g-4">
                     <div class="col-12 col-md-6 col-lg-4">
                         <article class="card nn-event-card h-100"><div class="card-body p-4 d-flex flex-column">
@@ -110,9 +160,9 @@
                             <p>Una primera toma de contacto con Bootstrap y sus componentes.</p>
                             <ul class="list-unstyled nn-event-detalles">
                                 <li><strong>Nivel:</strong> <span class="nn-nivel nn-nivel-inicial">Inicial</span></li>
-                                <li><strong>Lugar:</strong> A Coruña, por confirmar</li>
-                                <li><strong>Ponente:</strong> por confirmar</li>
-                                <li><strong>Plazas:</strong> por confirmar</li>
+                                <li><strong>Lugar:</strong> WeKCo, Mesoiro (A Coruña)</li>
+                                <li><strong>Ponente:</strong> <button type="button" class="nn-ponente-btn" data-bs-toggle="modal" data-bs-target="#ponente-lucia">Lucía Varela</button></li>
+                                <li><strong>Plazas:</strong> 30</li>
                             </ul>
                             <a href="./html/unete.html" class="btn nn-event-btn align-self-start mt-auto">Asistir</a>
                         </div></article>
@@ -124,9 +174,9 @@
                             <p>Un taller para mejorar la accesibilidad de interfaces web.</p>
                             <ul class="list-unstyled nn-event-detalles">
                                 <li><strong>Nivel:</strong> <span class="nn-nivel nn-nivel-medio">Medio</span></li>
-                                <li><strong>Lugar:</strong> A Coruña, por confirmar</li>
-                                <li><strong>Ponente:</strong> por confirmar</li>
-                                <li><strong>Plazas:</strong> por confirmar</li>
+                                <li><strong>Lugar:</strong> Deus (A Coruña)</li>
+                                <li><strong>Ponente:</strong> <button type="button" class="nn-ponente-btn" data-bs-toggle="modal" data-bs-target="#ponente-iago">Iago Pardo</button></li>
+                                <li><strong>Plazas:</strong> 25</li>
                             </ul>
                             <a href="./html/unete.html" class="btn nn-event-btn align-self-start mt-auto">Asistir</a>
                         </div></article>
@@ -138,23 +188,23 @@
                             <p>Una sesión sobre protección y buenas prácticas en aplicaciones web.</p>
                             <ul class="list-unstyled nn-event-detalles">
                                 <li><strong>Nivel:</strong> <span class="nn-nivel nn-nivel-avanzado">Avanzado</span></li>
-                                <li><strong>Lugar:</strong> A Coruña, por confirmar</li>
-                                <li><strong>Ponente:</strong> por confirmar</li>
-                                <li><strong>Plazas:</strong> aforo completo</li>
+                                <li><strong>Lugar:</strong> WeKCo, Mesoiro (A Coruña)</li>
+                                <li><strong>Ponente:</strong> <button type="button" class="nn-ponente-btn" data-bs-toggle="modal" data-bs-target="#ponente-noa">Noa Castro</button></li>
+                                <li><strong>Plazas:</strong> Aforo completo</li>
                             </ul>
                             <button type="button" class="btn nn-event-btn-completo align-self-start mt-auto" disabled>Aforo completo</button>
                         </div></article>
                     </div>
                 </div>
-                <div class="mt-5">
+                <div class="mt-5 d-none d-md-block">
                     <h4 class="h5 mb-3">Calendario de eventos</h4>
                     <div class="table-responsive nn-event-table-wrap">
                         <table class="table table-dark table-striped table-hover align-middle mb-0">
                             <caption>Fechas de ejemplo de los próximos eventos</caption>
                             <thead><tr><th scope="col">Fecha</th><th scope="col">Evento</th><th scope="col">Nivel</th><th scope="col">Plazas</th><th scope="col">Inscripción</th></tr></thead>
                             <tbody>
-                                <tr><td>01.12.2026</td><td>Introducción a Bootstrap</td><td><span class="nn-nivel nn-nivel-inicial">Inicial</span></td><td>Por confirmar</td><td><a href="./html/unete.html" class="btn btn-sm nn-event-btn">Asistir</a></td></tr>
-                                <tr><td>05.01.2027</td><td>Interfaces web accesibles</td><td><span class="nn-nivel nn-nivel-medio">Medio</span></td><td>Por confirmar</td><td><a href="./html/unete.html" class="btn btn-sm nn-event-btn">Asistir</a></td></tr>
+                                <tr><td>01.12.2026</td><td>Introducción a Bootstrap</td><td><span class="nn-nivel nn-nivel-inicial">Inicial</span></td><td>30</td><td><a href="./html/unete.html" class="btn btn-sm nn-event-btn">Asistir</a></td></tr>
+                                <tr><td>05.01.2027</td><td>Interfaces web accesibles</td><td><span class="nn-nivel nn-nivel-medio">Medio</span></td><td>25</td><td><a href="./html/unete.html" class="btn btn-sm nn-event-btn">Asistir</a></td></tr>
                                 <tr><td>02.02.2027</td><td>Seguridad en aplicaciones web</td><td><span class="nn-nivel nn-nivel-avanzado">Avanzado</span></td><td>Aforo completo</td><td><button type="button" class="btn btn-sm nn-event-btn-completo" disabled>Aforo completo</button></td></tr>
                             </tbody>
                         </table>
@@ -166,27 +216,121 @@
                 <p class="nn-event-label mb-1">Nuestra historia</p>
                 <h3 id="pasados-titulo" class="mb-3">Eventos pasados</h3>
                 <p>Un vistazo a los encuentros anteriores de la comunidad.</p>
-                <div class="row g-4">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="card nn-event-card h-100"><div class="card-body p-4">
-                            <p class="nn-event-fecha">3 de noviembre de 2026</p>
-                            <h4 class="h5">Encuentro de la comunidad</h4>
-                            <p>Un espacio para compartir ideas y conocer a otras personas interesadas en tecnología.</p>
-                            <div class="nn-event-foto">Fotografía pendiente</div>
-                        </div></article>
+                <div id="carrusel-pasados" class="carousel slide nn-carrusel" role="region" aria-label="Fotos de eventos pasados">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carrusel-pasados" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Evento 1: Encuentro de la comunidad"></button>
+                        <button type="button" data-bs-target="#carrusel-pasados" data-bs-slide-to="1" aria-label="Evento 2: Una tarde de tecnología"></button>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="card nn-event-card h-100"><div class="card-body p-4">
-                            <p class="nn-event-fecha">Octubre de 2026</p>
-                            <h4 class="h5">Una tarde de tecnología</h4>
-                            <p>Una jornada para aprender y compartir en comunidad.</p>
-                            <div class="nn-event-foto">Fotografía pendiente</div>
-                        </div></article>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/eventos-pasados/encuentro-comunidad.jpg" class="d-block w-100" alt="Grupo de participantes posando juntos en una sala con estanterías de libros" width="800" height="450">
+                            <div class="carousel-caption">
+                                <p class="nn-event-fecha mb-1">3 de noviembre de 2026</p>
+                                <h4 class="h5">Encuentro de la comunidad</h4>
+                                <p class="mb-0 d-none d-md-block">Un espacio para compartir ideas y conocer a otras personas interesadas en tecnología.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/eventos-pasados/tarde-tecnologia.jpg" class="d-block w-100" alt="Participantes trabajando con sus portátiles en una sala de conferencias" width="800" height="450" loading="lazy">
+                            <div class="carousel-caption">
+                                <p class="nn-event-fecha mb-1">Octubre de 2026</p>
+                                <h4 class="h5">Una tarde de tecnología</h4>
+                                <p class="mb-0 d-none d-md-block">Una jornada para aprender y compartir en comunidad.</p>
+                            </div>
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-pasados" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Evento anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrusel-pasados" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Evento siguiente</span>
+                    </button>
                 </div>
+                <p class="nn-creditos-imagenes mt-3">
+                    Fotos:
+                    <a href="https://commons.wikimedia.org/wiki/File:WikiGiovani_Meetup_2026_-_group_photo_01.jpg" target="_blank" rel="noopener">Encuentro</a>
+                    por Francyskus (CC0) ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Wikimedia_Morocco_Mini-Hackathon_2026_day_1_-_Participants_working_on_laptops_at_a_curved_conference_table_-_0001.jpg" target="_blank" rel="noopener">Tarde de tecnología</a>
+                    por DERDAKI ILIAS (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>). Recortadas.
+                </p>
             </section>
         </section>
+
+        <div class="modal fade nn-modal" id="ponente-lucia" tabindex="-1" aria-labelledby="ponente-lucia-titulo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title h4" id="ponente-lucia-titulo">Lucía Varela</h2>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="nn-ponente-cargo">Desarrolladora front-end y formadora</p>
+                        <p>Le gusta explicar HTML, CSS y Bootstrap desde cero, sin dar nada por sabido. Ha ayudado a muchas personas a maquetar su primera web.</p>
+                        <ul class="list-unstyled nn-event-detalles mb-0">
+                            <li><strong>Charla:</strong> Introducción a Bootstrap</li>
+                            <li><strong>Cuándo:</strong> 1 de diciembre de 2026 · 19:00</li>
+                            <li><strong>Dónde:</strong> WeKCo, Mesoiro (A Coruña)</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="./html/unete.html" class="btn nn-event-btn">Asistir</a>
+                        <button type="button" class="btn nn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade nn-modal" id="ponente-iago" tabindex="-1" aria-labelledby="ponente-iago-titulo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title h4" id="ponente-iago-titulo">Iago Pardo</h2>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="nn-ponente-cargo">Especialista en accesibilidad web</p>
+                        <p>Revisa interfaces con teclado y lector de pantalla y ayuda a los equipos a corregir lo que impide usar una web a todo el mundo.</p>
+                        <ul class="list-unstyled nn-event-detalles mb-0">
+                            <li><strong>Taller:</strong> Interfaces web accesibles</li>
+                            <li><strong>Cuándo:</strong> 5 de enero de 2027 · 19:00</li>
+                            <li><strong>Dónde:</strong> Deus (A Coruña)</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="./html/unete.html" class="btn nn-event-btn">Asistir</a>
+                        <button type="button" class="btn nn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade nn-modal" id="ponente-noa" tabindex="-1" aria-labelledby="ponente-noa-titulo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title h4" id="ponente-noa-titulo">Noa Castro</h2>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="nn-ponente-cargo">Ingeniera de seguridad de aplicaciones</p>
+                        <p>Trabaja en protección y buenas prácticas para aplicaciones web, y le interesa contarlo de forma que se entienda sin ser experta.</p>
+                        <ul class="list-unstyled nn-event-detalles mb-0">
+                            <li><strong>Charla:</strong> Seguridad en aplicaciones web</li>
+                            <li><strong>Cuándo:</strong> 2 de febrero de 2027 · 19:00</li>
+                            <li><strong>Dónde:</strong> WeKCo, Mesoiro (A Coruña)</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn nn-event-btn-completo" disabled>Aforo completo</button>
+                        <button type="button" class="btn nn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
         <div class="container-fluid px-4 px-lg-5">
             <div class="row gy-4 align-items-center justify-content-md-between">
@@ -221,12 +365,13 @@
                 <div class="col-12 col-md-auto nn-footer-newsletter">
                     <h3 class="h6 mb-3">Newsletter</h3>
                     <form class="needs-validation" novalidate>
+                        <label for="correo-footer" class="visually-hidden">Tu correo electrónico</label>
                         <div class="input-group">
                             <input id="correo-footer" type="email" class="form-control" placeholder="tu@correo"
-                                required>
+                                required aria-describedby="correo-footer-error">
                             <button class="btn-primary" type="submit">Apuntarme</button>
                         </div>
-                        <div class="invalid-feedback">Introduce un correo válido.</div>
+                        <div id="correo-footer-error" class="invalid-feedback">Introduce un correo válido.</div>
                     </form>
                 </div>
             </div>
