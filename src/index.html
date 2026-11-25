@@ -72,28 +72,120 @@
                     <p class="">Charlas • Talleres • Hackatones</p>
                     <h1 class="">Nodo Norte</h1>
                     <p class="">Comunidad tecnológica de A Coruña</p>
-                    <a href="#" class="btn-primary-eventos" tabindex="-1" role="button" aria-disabled="true">Ver Próximos eventos</a>
+                    <a href="#eventos" class="btn-primary-eventos">Ver próximos eventos</a>
                     <a href="#" class="btn-primary-socios" tabindex="-1" role="button" aria-disabled="true">Hazte Socio</a>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="card" style="width: 35rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <article class="card nn-event-card nn-event-destacado h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <p class="nn-event-label mb-2">Próximo evento</p>
+                            <h2 class="h3 card-title">Introducción a Bootstrap</h2>
+                            <p class="nn-event-fecha">1 de diciembre de 2026 · 19:00</p>
+                            <p>Una primera toma de contacto con Bootstrap y sus componentes.</p>
+                            <ul class="list-unstyled nn-event-detalles">
+                                <li><strong>Nivel:</strong> <span class="nn-nivel nn-nivel-inicial">Inicial</span></li>
+                                <li><strong>Lugar:</strong> A Coruña, por confirmar</li>
+                                <li><strong>Ponente:</strong> por confirmar</li>
+                                <li><strong>Plazas:</strong> por confirmar</li>
+                            </ul>
+                            <a href="./html/unete.html" class="btn nn-event-btn">Asistir</a>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="btn-primary-eventos" tabindex="-1" role="button" aria-disabled="true">Ver Próximos eventos</a>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </hero>
+
+        <!-- 1B: espacio reservado para la futura sección Sobre nosotros. -->
+        <!-- 1C: eventos. Los datos indicados son ejemplos de diseño. -->
+        <section id="eventos" class="container-fluid nn-eventos py-5" aria-labelledby="eventos-titulo">
+
+            <section id="eventos-futuros" class="mb-5" aria-labelledby="futuros-titulo">
+                <p class="nn-event-label mb-1">La comunidad se encuentra aquí</p>
+                <h3 id="futuros-titulo" class="mb-4">Proximamente</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card nn-event-card h-100"><div class="card-body p-4 d-flex flex-column">
+                            <p class="nn-event-fecha">1 de diciembre de 2026 · 19:00</p>
+                            <h4 class="h5">Introducción a Bootstrap</h4>
+                            <p>Una primera toma de contacto con Bootstrap y sus componentes.</p>
+                            <ul class="list-unstyled nn-event-detalles">
+                                <li><strong>Nivel:</strong> <span class="nn-nivel nn-nivel-inicial">Inicial</span></li>
+                                <li><strong>Lugar:</strong> A Coruña, por confirmar</li>
+                                <li><strong>Ponente:</strong> por confirmar</li>
+                                <li><strong>Plazas:</strong> por confirmar</li>
+                            </ul>
+                            <a href="./html/unete.html" class="btn nn-event-btn align-self-start mt-auto">Asistir</a>
+                        </div></article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card nn-event-card h-100"><div class="card-body p-4 d-flex flex-column">
+                            <p class="nn-event-fecha">5 de enero de 2027 · 19:00</p>
+                            <h4 class="h5">Interfaces web accesibles</h4>
+                            <p>Un taller para mejorar la accesibilidad de interfaces web.</p>
+                            <ul class="list-unstyled nn-event-detalles">
+                                <li><strong>Nivel:</strong> <span class="nn-nivel nn-nivel-medio">Medio</span></li>
+                                <li><strong>Lugar:</strong> A Coruña, por confirmar</li>
+                                <li><strong>Ponente:</strong> por confirmar</li>
+                                <li><strong>Plazas:</strong> por confirmar</li>
+                            </ul>
+                            <a href="./html/unete.html" class="btn nn-event-btn align-self-start mt-auto">Asistir</a>
+                        </div></article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card nn-event-card h-100"><div class="card-body p-4 d-flex flex-column">
+                            <p class="nn-event-fecha">2 de febrero de 2027 · 19:00</p>
+                            <h4 class="h5">Seguridad en aplicaciones web</h4>
+                            <p>Una sesión sobre protección y buenas prácticas en aplicaciones web.</p>
+                            <ul class="list-unstyled nn-event-detalles">
+                                <li><strong>Nivel:</strong> <span class="nn-nivel nn-nivel-avanzado">Avanzado</span></li>
+                                <li><strong>Lugar:</strong> A Coruña, por confirmar</li>
+                                <li><strong>Ponente:</strong> por confirmar</li>
+                                <li><strong>Plazas:</strong> aforo completo</li>
+                            </ul>
+                            <button type="button" class="btn nn-event-btn-completo align-self-start mt-auto" disabled>Aforo completo</button>
+                        </div></article>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h4 class="h5 mb-3">Calendario de eventos</h4>
+                    <div class="table-responsive nn-event-table-wrap">
+                        <table class="table table-dark table-striped table-hover align-middle mb-0">
+                            <caption>Fechas de ejemplo de los próximos eventos</caption>
+                            <thead><tr><th scope="col">Fecha</th><th scope="col">Evento</th><th scope="col">Nivel</th><th scope="col">Plazas</th><th scope="col">Inscripción</th></tr></thead>
+                            <tbody>
+                                <tr><td>01.12.2026</td><td>Introducción a Bootstrap</td><td><span class="nn-nivel nn-nivel-inicial">Inicial</span></td><td>Por confirmar</td><td><a href="./html/unete.html" class="btn btn-sm nn-event-btn">Asistir</a></td></tr>
+                                <tr><td>05.01.2027</td><td>Interfaces web accesibles</td><td><span class="nn-nivel nn-nivel-medio">Medio</span></td><td>Por confirmar</td><td><a href="./html/unete.html" class="btn btn-sm nn-event-btn">Asistir</a></td></tr>
+                                <tr><td>02.02.2027</td><td>Seguridad en aplicaciones web</td><td><span class="nn-nivel nn-nivel-avanzado">Avanzado</span></td><td>Aforo completo</td><td><button type="button" class="btn btn-sm nn-event-btn-completo" disabled>Aforo completo</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="eventos-pasados" aria-labelledby="pasados-titulo">
+                <p class="nn-event-label mb-1">Nuestra historia</p>
+                <h3 id="pasados-titulo" class="mb-3">Eventos pasados</h3>
+                <p>Un vistazo a los encuentros anteriores de la comunidad.</p>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card nn-event-card h-100"><div class="card-body p-4">
+                            <p class="nn-event-fecha">3 de noviembre de 2026</p>
+                            <h4 class="h5">Encuentro de la comunidad</h4>
+                            <p>Un espacio para compartir ideas y conocer a otras personas interesadas en tecnología.</p>
+                            <div class="nn-event-foto">Fotografía pendiente</div>
+                        </div></article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card nn-event-card h-100"><div class="card-body p-4">
+                            <p class="nn-event-fecha">Octubre de 2026</p>
+                            <h4 class="h5">Una tarde de tecnología</h4>
+                            <p>Una jornada para aprender y compartir en comunidad.</p>
+                            <div class="nn-event-foto">Fotografía pendiente</div>
+                        </div></article>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
     <footer>
         <div class="container-fluid px-4 px-lg-5">
