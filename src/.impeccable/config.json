@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-25T19:52:14.802Z",
+        "reason": "Inter es la tipografía de texto fijada en la guía de estilos del proyecto (global.css); los títulos usan Audiowide. Decisión del equipo, no del hook"
+      }
+    ]
+  }
+}

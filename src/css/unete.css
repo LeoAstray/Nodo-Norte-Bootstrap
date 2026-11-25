@@ -1,0 +1,27 @@
+.nn-unete-intro h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.nn-unete-subtitulo {
+    font-size: var(--fs-texto-grande);
+}
+
+/* Pestañas: Bootstrap las pinta en azul, aquí usan la paleta de la web */
+.nn-unete-tabs .nav-link {
+    color: var(--blanco-frio);
+    border: 1px solid var(--borde-violeta);
+    margin-right: 0.5rem;
+}
+
+.nn-unete-tabs .nav-link:hover,
+.nn-unete-tabs .nav-link:focus-visible {
+    color: var(--cian);
+}
+
+.nn-unete-tabs .nav-link.active {
+    background-color: var(--cian);
+    border-color: var(--cian);
+    color: var(--ciruela);
+}
