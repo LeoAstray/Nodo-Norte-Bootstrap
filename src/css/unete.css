@@ -8,7 +8,6 @@
     font-size: var(--fs-texto-grande);
 }
 
-/* Pestañas: Bootstrap las pinta en azul, aquí usan la paleta de la web */
 .nn-unete-tabs .nav-link {
     color: var(--blanco-frio);
     border: 1px solid var(--borde-violeta);
