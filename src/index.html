@@ -57,7 +57,7 @@
                     </ul>
                     <form class="d-flex" role="search">
                         <label for="busqueda" class="visually-hidden">Buscar en el sitio</label>
-                        <input id="busqueda" class="form-control me-2" type="search" placeholder=". . ." />
+                        <input id="busqueda" class="form-control me-2" type="search" placeholder=". . .">
                         <button class="btn-primary" type="submit">Buscar</button>
                     </form>
                 </div>
@@ -259,7 +259,8 @@
         </section>
 
         <!-- Modal de inscripcion a un evento (HU-06). El evento se rellena con el boton Asistir pulsado. -->
-        <div class="modal fade nn-modal" id="inscripcion" tabindex="-1" aria-labelledby="inscripcion-titulo" aria-hidden="true">
+        <!-- el aria lo ponemos para que el lector de pantalla diga el titulo del modal y el role lo ponemos porque el validador nos saltaba error por usar el aria en un div sin role. -->
+        <div class="modal fade nn-modal" id="inscripcion" tabindex="-1" role="dialog" aria-labelledby="inscripcion-titulo" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -304,7 +305,8 @@
             </div>
         </div>
 
-        <div class="modal fade nn-modal" id="ponente-lucia" tabindex="-1" aria-labelledby="ponente-lucia-titulo" aria-hidden="true">
+        <!-- el aria lo ponemos para que el lector de pantalla diga el titulo del modal y el role lo ponemos porque el validador nos saltaba error por usar el aria en un div sin role. -->
+        <div class="modal fade nn-modal" id="ponente-lucia" tabindex="-1" role="dialog" aria-labelledby="ponente-lucia-titulo" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -328,7 +330,8 @@
             </div>
         </div>
 
-        <div class="modal fade nn-modal" id="ponente-iago" tabindex="-1" aria-labelledby="ponente-iago-titulo" aria-hidden="true">
+        <!-- el aria lo ponemos para que el lector de pantalla diga el titulo del modal y el role lo ponemos porque el validador nos saltaba error por usar el aria en un div sin role. -->
+        <div class="modal fade nn-modal" id="ponente-iago" tabindex="-1" role="dialog" aria-labelledby="ponente-iago-titulo" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -352,7 +355,8 @@
             </div>
         </div>
 
-        <div class="modal fade nn-modal" id="ponente-noa" tabindex="-1" aria-labelledby="ponente-noa-titulo" aria-hidden="true">
+        <!-- el aria lo ponemos para que el lector de pantalla diga el titulo del modal y el role lo ponemos porque el validador nos saltaba error por usar el aria en un div sin role. -->
+        <div class="modal fade nn-modal" id="ponente-noa" tabindex="-1" role="dialog" aria-labelledby="ponente-noa-titulo" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
